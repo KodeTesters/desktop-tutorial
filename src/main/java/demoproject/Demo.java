@@ -13,6 +13,8 @@ public class Demo {
 
         logger.info("Helloo World!!");
 
+        logger.debug("debugging");
+
         logger.warn("warning");
 
         logger.error("ERROR");
