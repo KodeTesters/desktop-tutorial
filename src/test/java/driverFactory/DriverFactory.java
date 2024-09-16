@@ -1,7 +1,7 @@
 package driverFactory;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -45,17 +45,8 @@ public class DriverFactory {
         return driver;
     }
 
-    public static WebDriver getFireFoxDriver() {
-        if (driver==null) {
-            driver = new FirefoxDriver();
-            return driver;
-        }
-        else {
-            return driver;
-        }
-    }
 
-    public static WebDriver getChromeDriver() {
+    public static WebDriver getdriver() {
         if (driver==null) {
             driver = new ChromeDriver();
             return driver;
@@ -65,8 +56,8 @@ public class DriverFactory {
         }
     }
 
-
     public void closeallDriver() {
+
         driver.close();
     }
 }
