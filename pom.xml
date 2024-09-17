@@ -9,7 +9,20 @@
     <version>1.0-SNAPSHOT</version>
 <dependencies>
 
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-testng</artifactId>
+        <version>7.18.1</version>
+    </dependency>
 
+    <!-- https://mvnrepository.com/artifact/org.testng/testng -->
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.10.2</version>
+        <scope>test</scope>
+    </dependency>
 
     <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
     <dependency>
@@ -59,8 +72,6 @@
         <artifactId>log4j-api</artifactId>
         <version>2.20.0</version>
     </dependency>
-
-
 </dependencies>
     <build>
         <plugins>
@@ -71,6 +82,16 @@
                 <configuration>
                     <source>17</source> <!-- Set your Java version -->
                     <target>17</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.0.0-M5</version> <!-- Use the latest version -->
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
                 </configuration>
             </plugin>
         </plugins>

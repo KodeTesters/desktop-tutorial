@@ -1,7 +1,7 @@
 package driverFactory;
 
 import java.time.Duration;
-import java.util.concurrent.TimeUnit;
+
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,6 +36,7 @@ public class DriverFactory {
             driver = new EdgeDriver();
 
         }
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
 
         driver.manage().window().maximize();
@@ -45,17 +46,8 @@ public class DriverFactory {
         return driver;
     }
 
-    public static WebDriver getFireFoxDriver() {
-        if (driver==null) {
-            driver = new FirefoxDriver();
-            return driver;
-        }
-        else {
-            return driver;
-        }
-    }
 
-    public static WebDriver getChromeDriver() {
+    public static WebDriver getdriver() {
         if (driver==null) {
             driver = new ChromeDriver();
             return driver;
@@ -65,8 +57,8 @@ public class DriverFactory {
         }
     }
 
+    public static void closeallDriver() {
 
-    public void closeallDriver() {
         driver.close();
     }
 }
