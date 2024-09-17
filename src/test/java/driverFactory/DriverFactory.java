@@ -36,6 +36,7 @@ public class DriverFactory {
             driver = new EdgeDriver();
 
         }
+
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
 
         driver.manage().window().maximize();
@@ -56,7 +57,7 @@ public class DriverFactory {
         }
     }
 
-    public void closeallDriver() {
+    public static void closeallDriver() {
 
         driver.close();
     }
