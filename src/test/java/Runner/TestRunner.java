@@ -1,6 +1,7 @@
 package Runner;
 
 import io.cucumber.testng.AbstractTestNGCucumberTests;
+
 import org.junit.runner.RunWith;
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -14,6 +15,7 @@ import org.testng.annotations.DataProvider;
         plugin = {"pretty", "html:target/dsAlgoReport.html"}, // Reporting purposes
         monochrome = true // Makes the console output more readable
          )
+
 public class TestRunner extends AbstractTestNGCucumberTests {
     @Override
     @DataProvider(parallel = false)
@@ -23,4 +25,3 @@ public class TestRunner extends AbstractTestNGCucumberTests {
     }
 
     }
-
