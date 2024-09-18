@@ -2,8 +2,8 @@
 Feature: Graph Testing
 
   Scenario: User signs in successfully
-    Given The user is on the DsAlgo Signin Page
-    When The user enter valid "kodetester" and "numpyninja24"
+    Given The user is on the login Page
+    When The user enter valid "kodetesters" and "numpyninja24"
     And The user click on login button
     Then The user should be redirected to Ds Algo Home Page
 
@@ -20,6 +20,23 @@ Feature: Graph Testing
     When The user Enters valid python code in tryEditor from data "print('hello world')"
     And user click on Run button
     Then The user should be presented with the Run
+    When The user Enter invalid python code in tryEditor from data "print=heloo world"
+    And user click on a Run button
+    Then The user get the error message
+
+  @representation
+  Scenario:   user is navigated to Graph page
+    Given user is navigated to Graph page
+    When user clicks graphical representation
+    Then  user clicks tryhere
+    When The user Enters valid python code in tryEditor from data "print('hello world')"
+    And user click on Run button
+    Then The user should be presented with the Run
     When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
     And user click on a Run button
     Then The user get the error message
+
+  Scenario: The user validating "Practice Questions" page
+    Given user in Graph page
+    When The user clicks Practice Questions button of Graph page
+    Then The user should be directed to Practice page
