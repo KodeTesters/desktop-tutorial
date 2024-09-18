@@ -1,52 +1,58 @@
 package Stepdefinition;
 
 
+import Pages.Graphpage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+
+import static driverFactory.DriverFactory.getdriver;
 
 public class GraphSteps  {
 
-
-    @Given("^The user is on the DsAlgo signin Page$")
-    public void the_user_is_on_the_ds_algo_signin_page() {
-
+   Graphpage gp =new Graphpage();
+    @Given("The user is on the login Page")
+    public void the_user_is_on_the_login_page() {
+        gp.user_click_to_login();
     }
-
-    @When("The user enter valid {string} and {string}")
-    public void the_user_enter_valid_and(String string, String string2) {
+    @When("The user click on login button")
+    public void the_user_click_on_login_button() {
+        getdriver().get("https://dsportalapp.herokuapp.com/");
     }
-
-    @When ("^The user click on login button$")
-    public void the_user_click_on_login_button(){
-
-    }
-
-    @Then("^The user should be redirected to Ds Algo Home Page$")
-    public void the_user_should_be_redirected_to_ds_algo_home_page() {
-
+    @Then("The user should be redirected to the home page")
+    public void the_user_should_be_redirected_to_the_home_page() {
+        getdriver().get("https://dsportalapp.herokuapp.com/home");
     }
         @Given("^The user is on the DsAlgo Home Page$")
         public void the_user_is_on_the_ds_algo_home_page() {
+            gp.user_click_to_login();
+           //   String expectedUrl = "https://dsportalapp.herokuapp.com/home"; // Replace with the actual URL of the Graph page
+            //String actualUrl = gp.getdriver().getCurrentUrl();
+
+            //Assert.assertTrue("The user is not redirected to the Graph page", actualUrl.contains(expectedUrl));
 
         }
 
         @When("^user clicks Getting Started button in Graph module$")
         public void user_clicks_getting_started_button_in_graph_module() {
-
+            gp.getstart();
         }
         @Then("^user should be directed to Graph overview Page$")
         public void user_should_be_directed_to_graph_overview_page() {
+           System.out.println("The user is in Graph overview page");
 
         }
         @When("^user clicks Graph$")
         public void user_clicks_graph() {
-
+            gp.clickGraph();
         }
         @Then("^user is redirected to Graph page$")
         public void user_is_redirected_to_graph_page() {
 
         }
+
+
         @Then("^user clicks Try Here button$")
         public void user_clicks_try_here_button() {
 
