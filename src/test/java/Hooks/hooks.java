@@ -12,7 +12,6 @@ public class hooks extends DriverFactory {
     private static DriverFactory driverfactory;
     //static Scenario scenario;
 
-
     @Before
     public void scenario(Scenario scenario) {
         LoggerLoad .info("===============================================================================================");
