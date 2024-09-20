@@ -1,15 +1,16 @@
 package Runner;
 
-import driverFactory.DriverFactory;
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-
 import org.junit.runner.RunWith;
-import io.cucumber.junit.Cucumber;
-import io.cucumber.junit.CucumberOptions;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+
+import driverFactory.DriverFactory;
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
+import io.cucumber.testng.AbstractTestNGCucumberTests;
 import utilities.LoggerLoad;
 
 @RunWith(Cucumber.class)
@@ -32,13 +33,13 @@ public class TestRunner extends AbstractTestNGCucumberTests {
                 return super.scenarios();
         }
 
-        public static WebDriver driver;
-        // @Optional ("firefox")
+        
+        public   WebDriver driver;
         private static DriverFactory driverfactory;
-
+        
         @BeforeTest
         @Parameters({ "browser" })
-        public void defineBrowser(String browser) throws Throwable {
+        public void defineBrowser(@Optional ("firefox") String browser) throws Throwable {
                 System.out.println("Browser is" + browser);
                 driverfactory = new DriverFactory();
                 driver = driverfactory.initializeDrivers(browser);
