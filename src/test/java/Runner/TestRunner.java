@@ -14,11 +14,13 @@ import utilities.LoggerLoad;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = { "pretty", "json:target/target/Cucumber.json",
-                "pretty", "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
-                "pretty", "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-                "pretty", "html:target/dsAlgoReport.html" }, // reporting purpose
+
+                "io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm",
+                "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:MyTestSuite",
+                "html:target/dsAlgoReport.html" }, // reporting purpose
+                name = { "MyTestSuite" }, // name of the test
                 monochrome = false, // console output
-                tags = "", // tags from feature file
+                tags = "@DataStructureFeature", // tags from feature file
                 features = { "src/test/resources/features" }, // location of feature files
                 glue = { "stepDefinitions", "pageObjects", "driverFactory", "hooks" }) // location of step definition
                                                                                        // files
@@ -27,7 +29,6 @@ public class TestRunner extends AbstractTestNGCucumberTests {
         @Override
         @DataProvider(parallel = false)
         public Object[][] scenarios() {
-
                 return super.scenarios();
         }
 
