@@ -3,14 +3,14 @@ package Stepdefinition;
 
 import static driverFactory.DriverFactory.getdriver;
 
-import Pages.Graph_page;
+import Pages.Graphpage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 public class GraphSteps  {
 
-   Graph_page gp =new Graph_page();
+   Graphpage gp =new Graphpage();
     @Given("The user is on the login Page")
     public void the_user_is_on_the_login_page() {
         gp.user_click_to_login();
