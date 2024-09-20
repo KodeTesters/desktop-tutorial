@@ -17,8 +17,8 @@ Scenario: Ds-Algo Portal
 
 
 #sendng  credentials using data table
-  Scenario: user send username and password only
-    Given user is in registerpage
+   Scenario: user send username and password only
+    Given user in registerform
     When user clicks Register button after entering Username and password with Password Confirmation field empty
       | Kodetesters | numpyninja24 |
     Then  display an error "Please fill out this field" below Password Confirmation textbox
