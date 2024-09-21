@@ -13,7 +13,10 @@ public class hooks extends DriverFactory {
     //static Scenario scenario;
 
     @Before
+
     public void scenario(Scenario scenario) {
+       driverfactory = new DriverFactory();
+       driver = driverfactory.initializeDrivers("chrome");
         LoggerLoad .info("===============================================================================================");
         LoggerLoad.info(scenario.getSourceTagNames() +" : "+scenario.getName());
         LoggerLoad.info("-----------------------------------------------------------------------------------------------");
@@ -27,9 +30,9 @@ public class hooks extends DriverFactory {
             scenario.attach(screenshot, "image/png", "screenshot");
         }
     }
-        @AfterAll
+        @After
         public static void after() {
-            driverfactory = new DriverFactory();
+            //driverfactory = new DriverFactory();
             LoggerLoad.info("Closing Driver");
             DriverFactory.closeallDriver();
         }
