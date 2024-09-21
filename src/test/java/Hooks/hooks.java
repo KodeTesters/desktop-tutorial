@@ -4,7 +4,6 @@ import driverFactory.DriverFactory;
 import io.cucumber.java.*;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import utilities.LoggerLoad;
 
 public class hooks extends DriverFactory {
@@ -14,6 +13,10 @@ public class hooks extends DriverFactory {
 
     @Before
     public void scenario(Scenario scenario) {
+        driverfactory = new DriverFactory();
+        driver = driverfactory.initializeDrivers("chrome");
+
+
         LoggerLoad .info("===============================================================================================");
         LoggerLoad.info(scenario.getSourceTagNames() +" : "+scenario.getName());
         LoggerLoad.info("-----------------------------------------------------------------------------------------------");
@@ -27,9 +30,9 @@ public class hooks extends DriverFactory {
             scenario.attach(screenshot, "image/png", "screenshot");
         }
     }
-        @AfterAll
+        @After
         public static void after() {
-            driverfactory = new DriverFactory();
+           
             LoggerLoad.info("Closing Driver");
             DriverFactory.closeallDriver();
         }
