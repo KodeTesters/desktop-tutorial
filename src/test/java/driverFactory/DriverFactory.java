@@ -59,6 +59,6 @@ public class DriverFactory {
 
     public static void closeallDriver() {
 
-        driver.close();
+        driver.quit();
     }
 }
