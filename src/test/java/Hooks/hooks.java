@@ -5,7 +5,6 @@ import io.cucumber.java.*;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utilities.ConfigReader;
 import utilities.LoggerLoad;
 
 import java.io.ByteArrayInputStream;
