@@ -3,6 +3,7 @@ package driverFactory;
 import java.time.Duration;
 
 
+import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -10,11 +11,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import utilities.LoggerLoad;
 
+@Slf4j
 public class DriverFactory {
     public	static WebDriver driver;
     public static WebDriver initializeDrivers(String browser)
     {
+        LoggerLoad.info("Initializing driver for --------------------------------- : "+browser);
         if (browser.equalsIgnoreCase("firefox")) {
 
             WebDriverManager.firefoxdriver().setup();
@@ -37,28 +41,28 @@ public class DriverFactory {
 
         }
 
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
 
-        driver.manage().window().maximize();
+       // driver.manage().window().maximize();
 
-        driver.get("https://dsportalapp.herokuapp.com/");
-        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+        //driver.get("https://dsportalapp.herokuapp.com/");
+        //driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
         return driver;
     }
 
 
     public static WebDriver getdriver() {
-        if (driver==null) {
+        if (driver == null) {
             driver = new ChromeDriver();
             return driver;
-        }
-        else {
+        } else {
             return driver;
+
         }
     }
 
     public static void closeallDriver() {
-
+        driver.close();
         driver.quit();
     }
 }
