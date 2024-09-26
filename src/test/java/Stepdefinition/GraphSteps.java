@@ -1,92 +1,143 @@
 package Stepdefinition;
 
-
-import Pages.Graphpage;
+import Pages.GraphPage;
+import Runner.TestRunner;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+import utilities.ConfigReader;
+import utilities.LoggerLoad;
 
 import static driverFactory.DriverFactory.getdriver;
+import static org.testng.AssertJUnit.assertEquals;
 
-public class GraphSteps  {
+public class GraphSteps extends TestRunner {
 
-   Graphpage gp =new Graphpage();
+    GraphPage graphPage = new GraphPage();
+    String Excelpath = ConfigReader.getExcelFilePath();
+    //String expectedMsg;
+
     @Given("The user is on the login Page")
     public void the_user_is_on_the_login_page() {
-        gp.user_click_to_login();
+        // Navigate to the homepage and click the login button
+        graphPage.user_click_to_login();
+        LoggerLoad.info("User navigated to login page and logged in");
     }
-    @When("The user click on login button")
+
+    @When("The user enter valid {string} and {string}")
+    public void the_user_enter_valid_and(String username, String password) {
+        // This step is already handled in the user_click_to_login method
+        LoggerLoad.info("Credentials entered: " + username + " and " + password);
+    }
+
+    @Then("The user click on login button")
     public void the_user_click_on_login_button() {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
+        // This step is also handled in the user_click_to_login method
+        LoggerLoad.info("Login button clicked");
     }
-    @Then("The user should be redirected to the home page")
-    public void the_user_should_be_redirected_to_the_home_page() {
-        getdriver().get("https://dsportalapp.herokuapp.com/home");
+
+    @Then("The user redirected to homepage")
+    public void theUserRedirectedToHomepage() {
+        graphPage.navigateToHomePage();
     }
-        @Given("^The user is on the DsAlgo Home Page$")
-        public void the_user_is_on_the_ds_algo_home_page() {
-            gp.user_click_to_login();
-           //   String expectedUrl = "https://dsportalapp.herokuapp.com/home"; // Replace with the actual URL of the Graph page
-            //String actualUrl = gp.getdriver().getCurrentUrl();
-
-            //Assert.assertTrue("The user is not redirected to the Graph page", actualUrl.contains(expectedUrl));
-
-        }
-
-        @When("^user clicks Getting Started button in Graph module$")
-        public void user_clicks_getting_started_button_in_graph_module() {
-            gp.getstart();
-        }
-        @Then("^user should be directed to Graph overview Page$")
-        public void user_should_be_directed_to_graph_overview_page() {
-           System.out.println("The user is in Graph overview page");
-
-        }
-        @When("^user clicks Graph$")
-        public void user_clicks_graph() {
-            gp.clickGraph();
-        }
-        @Then("^user is redirected to Graph page$")
-        public void user_is_redirected_to_graph_page() {
-
-        }
 
 
-        @Then("^user clicks Try Here button$")
-        public void user_clicks_try_here_button() {
-
-        }
-
-
-    @Given("^The user is in a try here page having  tryEditor with a Run button to test$")
-    public void the_user_is_in_a_try_here_page_having_try_editor_with_a_run_button_to_test() {
-
+    // @TS_graph_02
+    @Given("The user is on the homepage")
+    public void the_user_is_on_the_homepage() {
+        System.out.println("User is on the homepage");
     }
-    @When("The user Enters valid python code in tryEditor from data {string}")
-    public void the_user_enters_valid_python_code_in_try_editor_from_data(String string) {
 
+    @When("The user clicks the graph item from the drop down menu")
+    public void the_user_clicks_the_graph_item_from_the_drop_down_menu() {
+        graphPage.dropdown_graph();
     }
-    @When("^user click on Run button$")
-    public void user_click_on_run_button() {
 
+    @Then("The user be directed to Graph Page")
+    public void the_user_be_directed_to_graph_page() {
+        String Title = graphPage.getGraphPageTitle();
+        LoggerLoad.info("title of current page : " + Title);
+        //assertEquals(Title, "Graph", "Title not matched");
     }
-    @Then("^The user should be presented with the Run$")
-    public void the_user_should_be_presented_with_the_run() {
 
+    // @TS_graph_03
+    @Given("The user is on the Graph Page")
+    public void the_user_is_on_the_graph_page() {
+        graphPage.navigateToGraphPage();
     }
-    @When("The user Enter invalid python code in tryEditor from sheet {string}")
-    public void the_user_enter_invalid_python_code_in_try_editor_from_sheet(String string) {
 
+    @When("The user clicks Graph link on Graph page")
+    public void the_user_clicks_graph_link_on_graph_page() {
+        graphPage.clickOnGraphLink();
     }
-    @When("^user click on a Run button$")
-    public void user_click_on_a_run_button() {
 
+    @Then("The user should be redirected to Graph Graph page")
+    public void the_user_should_be_redirected_to_graph_graph_page() {
+        String Title = graphPage.getGraphPageTitle();
+        LoggerLoad.info("Title of the current page is : " + Title);
+        assertEquals(Title, "Graph", "Title not matched");
     }
-    @Then("^The user get the error message$")
-    public void the_user_get_the_error_message() {
 
+    // @TS_graph_04
+    @Given("The user navigates to Graph Graph page")
+    public void the_user_navigates_to_graph_graph_page() {
+        graphPage.navigateToGraphGraphPage();
     }
+
+    @Then("The user should be directed to Editor page with Run button")
+    public void the_user_should_be_directed_to_editor_page_with_run_button() {
+
+        String Title = graphPage.getGraphPageTitle();
+        LoggerLoad.info("Title of current page is :" + Title);
+        assertEquals(Title, "Assessment", "Title not matched");
+    }
+
+    // TS_graph_07
+    @Given("The user in editor page and navigates to the graph page")
+    public void the_user_in_editor_page_and_navigates_to_the_graph_page() {
+        graphPage.navigateToGraphPage();
+    }
+
+    @When("The user clicks on Graph Representations link")
+    public void the_user_clicks_on_graph_representations_link() {
+        graphPage.clickOnGraphRepresentationsLink();
+    }
+
+    @Then("The user should be redirected to Graph Representations page")
+    public void the_user_should_be_redirected_to_graph_representations_page() {
+        String Title = graphPage.getGraphPageTitle();
+        LoggerLoad.info("Title of current page is :" + Title);
+        assertEquals(Title, "Graph Representations", "Error found , Incorrect title found");
+    }
+
+    // TS_graph_08
+    @Given("The user is in Graph Representations page")
+    public void the_user_is_in_graph_representations_page() {
+        graphPage.navigateToGraphRepresentationsPage();
+    }
+
+    @When("The user clicks on Tryhere link on graph representations page")
+    public void the_user_clicks_on_tryhere_link_on_graph_representations_page() {
+        graphPage.clickOnGraphTryhereLink();
+    }
+
+    // TS_graph_11
+    @Given("The user is in Editor page and navigates to graph representations page")
+    public void the_user_is_in_editor_page_and_navigates_to_graph_representations_page() {
+        graphPage.navigateToGraphRepresentationsPage();
+    }
+
+    @When("the user clicks on Practice Questions in graph representations page")
+    public void the_user_clicks_on_practice_questions_in_graph_representations_page() {
+        graphPage.clickOnGraphPracQuesLink();
+    }
+
+    @Then("The user is directed to graph Practice page")
+    public void the_user_is_directed_to_graph_practice_page() {
+        String Title = graphPage.getGraphPageTitle();
+        LoggerLoad.info("Title of current page is :" + Title);
+        assertEquals(Title, "Practice Questions", "Title not matched");
+    }
+
 
 }
-

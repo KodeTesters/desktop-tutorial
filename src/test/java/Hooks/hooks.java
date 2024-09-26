@@ -2,19 +2,30 @@ package Hooks;
 
 import driverFactory.DriverFactory;
 import io.cucumber.java.*;
+import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import utilities.ConfigReader;
 import utilities.LoggerLoad;
 
+import java.io.ByteArrayInputStream;
+
 public class hooks extends DriverFactory {
-   // public static WebDriver driver;
-    private static DriverFactory driverfactory;
-    //static Scenario scenario;
+
+    @BeforeAll
+    public static void before() throws Throwable {
+        LoggerLoad.info("Loading Config file");
+        ConfigReader.getProperties();
+        String browser = ConfigReader.getBrowserType();
+        driver = initializeDrivers(browser);
+        LoggerLoad.info("Initializing driver for : "+browser);
+    }
 
     @Before
     public void scenario(Scenario scenario) {
-        LoggerLoad .info("===============================================================================================");
+
+        // driver = initializeDrivers("chrome");
+        LoggerLoad.info("===============================================================================================");
         LoggerLoad.info(scenario.getSourceTagNames() +" : "+scenario.getName());
         LoggerLoad.info("-----------------------------------------------------------------------------------------------");
 
@@ -25,14 +36,16 @@ public class hooks extends DriverFactory {
         if (scenario.isFailed()) {
             final byte[] screenshot = ((TakesScreenshot) getdriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", "screenshot");
+            Allure.addAttachment("Myscreenshot",
+                    new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         }
     }
-        @AfterAll
-        public static void after() {
-            driverfactory = new DriverFactory();
-            LoggerLoad.info("Closing Driver");
-            DriverFactory.closeallDriver();
-        }
+//    @After
+//    public static void after() {
+//
+//        LoggerLoad.info("Closing Driver");
+//        DriverFactory.closeallDriver();
+//    }
 
-        }
+}
 
