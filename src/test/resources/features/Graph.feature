@@ -1,89 +1,42 @@
-@Graph
-Feature: Graph Testing
 
-  Background:User signs in successfully
-    Given The user is on the login Page
-    When The user enter valid "kodetesters" and "numpyninja24"
+@graph
+Feature: Testing graph page on DSalgo aplliction
+
+  Scenario: The user is logged in to DS Algo portal
+    Given The user is on Signin page of DS Algo portal
+    When The user enter valid "kodetes" and "numpymimja24"
     And The user click on login button
     Then The user redirected to homepage
 
+  Scenario: Graph Module
+    Given user is in the Home page after logged in
+    When user clicks Getting Started button in Graph module
+    Then  user should be directed to Graph overview Page
+    When  user clicks Graph
+    Then user is redirected to Graph page
+    Then  user clicks Try Here button
+  Scenario: The user run the code in tryEditor with valid input for Graph page
+    Given The user is in a try here page having  tryEditor with a Run button to test
+    When The user Enters valid python code in tryEditor from data "print('hello world')"
+    And user click on Run button
+    Then The user should be presented with the Run
+    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
+    And user click on a Run button
+    Then The user get the error message
 
-  @TS_graph_02
-  Scenario: The user is able to navigate to Graph Data Structure Page
-    Given The user is on the homepage
-    When The user clicks the graph item from the drop down menu
-    Then The user be directed to Graph Page
+  @representation
+  Scenario:   user is navigated to Graph page
+    Given user is navigated to Graph page
+    When user clicks graphical representation
+    Then  user clicks tryhere
+    When The user Enters valid python code in tryEditor from data "print('hello world')"
+    And user click on Run button
+    Then The user should be presented with the Run
+    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
+    And user click on a Run button
+    Then The user get the error message
+  Scenario: The user validating "Practice Questions" page
+    Given user in Graph page
+    When The user clicks Practice Questions button of Graph page
+    Then The user should be directed to Practice page
 
-  @TS_graph_03
-  Scenario: The user is able to navigate to Graph page
-    Given The user is on the Graph Page
-    When The user clicks Graph link on Graph page
-    Then The user should be redirected to Graph Graph page
-
-  @TS_graph_04
-  Scenario: The user should be directed to editor page with run button to test python code
-    Given The user navigates to Graph Graph page
-    When The user clicks on Tryhere link
-    Then The user should be directed to Editor page with Run button
-
-  @TS_graph_05
-  Scenario Outline: The user is able to run code in Editor for Graph page
-    Given The user is in a page having an Editor with a Run button to test
-    When The user enters valid python code in Editor from sheet "<Sheetname>" and <RowNumber>
-    And clicks run button
-    Then The user is presented with the result after run button is clicked
-
-    Examples:
-      | Sheetname | RowNumber |
-      | CodeData  | 0         |
-
-  @TS_graph_06
-  Scenario Outline: The user is presented with error message for invalid code in Editor for Graph page
-    Given The user is in a page having an Editor with a Run button to test
-    When The user enters invalid python code in Editor from sheet "<Sheetname>" and <RowNumber>
-    And clicks run button
-    Then The user gets an error message
-
-    Examples:
-      | Sheetname | RowNumber |
-      | CodeData  | 1         |
-
-  @TS_graph_07
-  Scenario: The user is able to navigate to graph page and click on Graph Representations link
-    Given The user in editor page and navigates to the graph page
-    When The user clicks on Graph Representations link
-    Then The user should be redirected to Graph Representations page
-
-  @TS_graph_08
-  Scenario: The user should be directed to editor page with run button to test python code from Graph Representations page
-    Given The user is in Graph Representations page
-    When The user clicks on Tryhere link on graph representations page
-    Then The user navigates to Editor page with Run button
-
-  @TS_graph_09
-  Scenario Outline: The user is able to run code in Editor for Graph Representations page
-    Given The user is in a page having an Editor with a Run button to test
-    When The user enters valid python code in Editor from sheet "<Sheetname>" and <RowNumber>
-    And clicks run button
-    Then The user is presented with the result after run button is clicked
-
-    Examples:
-      | Sheetname | RowNumber |
-      | CodeData  | 0         |
-
-  @TS_graph_10
-  Scenario Outline: The user is presented with error message for invalid code in Editor for Graph Representations page
-    Given The user is in a page having an Editor with a Run button to test
-    When The user enters invalid python code in Editor from sheet "<Sheetname>" and <RowNumber>
-    And clicks run button
-    Then The user gets an error message
-
-    Examples:
-      | Sheetname | RowNumber |
-      | CodeData  | 1         |
-
-  @TS_graph_11
-  Scenario: The user is able to navigate to graph representations page and click on Practice Questions
-    Given The user is in Editor page and navigates to graph representations page
-    When the user clicks on Practice Questions in graph representations page
-    Then The user is directed to graph Practice page

@@ -90,6 +90,7 @@ Feature: Array feature
 
     When user enters code "print(hello)" in questions1 page
     Then An alert message should be displayed in questions1 page
+
     When user clicks submit button in questions1 page
     Then submission output is displayed on in questions1 page
   @arr_07
@@ -97,8 +98,10 @@ Feature: Array feature
     Given The user is on the Practice page
     When The user clicks Max Consecutive Ones link
     Then The user should be redirected to question2 page
+
     When user enters code "print(hello)" in questions2 page
     Then An alert message should be displayed in questions2 page
+
     When user clicks submit button in questions2 page
     Then submission output is displayed on in questions2 page
   @arr_08
@@ -106,8 +109,10 @@ Feature: Array feature
     Given The user is on the Practice page for Find Numbers with Even Number of Digits
     When The user clicks Find Numbers with Even Number of Digits link
     Then The user should be redirected to questions3 page
+
     When user enters code "print(hello)" in questions3 page
     Then An alert message should be displayed in questions3 page
+
     When user clicks submit button in questions3 page
     Then submission output is displayed on in questions3 page
   @arr_09
@@ -115,8 +120,10 @@ Feature: Array feature
     Given The user is on the Practice page for Squares of a Sorted Array page
     When user clicks Squares of  a Sorted Array link
     Then user is redirected to questions4 page
+
     When user enters code "print(hello)" in questions4 page
     Then An alert message should be displayed in questions4 page
+
     When user clicks submit button in questions4 page
     Then submission output is displayed on in questions4 page
     Then click signout for Array page
