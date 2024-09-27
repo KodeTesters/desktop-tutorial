@@ -5,10 +5,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import driverFactory.DriverFactory;
-import Runner.TestRunner;
 import utilities.LoggerLoad;
 
-public class GraphPage extends DriverFactory {
+public class GraphsPage extends DriverFactory {
 
     public void user_click_to_login() {
         getdriver().get("https://dsportalapp.herokuapp.com/");
