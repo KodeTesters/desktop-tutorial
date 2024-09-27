@@ -3,11 +3,11 @@ package Stepdefinition;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import Pages.GraphPage;
+import Pages.Graphpage;
 import Runner.TestRunner;
 
-public class GraphSteps extends TestRunner {
-    GraphPage gp=new GraphPage();
+public class GraphSteps {
+    Graphpage gp=new Graphpage();
     @Given("user is in the Home page after logged in")
     public void user_is_in_the_home_page_after_logged_in() {
         gp.get_url();

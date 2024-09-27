@@ -39,11 +39,12 @@ public class hooks extends DriverFactory {
                     new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         }
     }
-    @After
+    @AfterAll
     public static void after() {
 
         LoggerLoad.info("Closing Driver");
         DriverFactory.closeallDriver();
+        driver.quit();
     }
 
 }

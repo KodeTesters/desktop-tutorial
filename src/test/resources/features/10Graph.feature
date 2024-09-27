@@ -15,6 +15,7 @@ Feature: Testing graph page on DSalgo aplliction
     When  user clicks Graph
     Then user is redirected to Graph page
     Then  user clicks Try Here button
+
   Scenario: The user run the code in tryEditor with valid input for Graph page
     Given The user is in a try here page having  tryEditor with a Run button to test
     When The user Enters valid python code in tryEditor from data "print('hello world')"

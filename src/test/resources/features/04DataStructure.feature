@@ -1,5 +1,7 @@
+@Data_Structure
 Feature: Testing data structure Module
-Scenario: Data structure
+//Scenario: Data structure
+  @Ds_01
 Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
     When The user enter valid "kodetesters" and "numpyninja24"
@@ -12,7 +14,7 @@ Then  user should  redirected to time complexity of Data structures-Introduction
 Then user clicks try Here button
 And user should be redirected to a page having an tryEditor with a Run button
 When  user send a valid python code in Editor field with data "print('hello')"
- Then user click run button 
+ Then user click run button
 And   valid code is executed and the result is displayed
 When  user write invalid code "print =abc" and click the run button
 Then   the error message is displayed

@@ -54,7 +54,7 @@ public class DriverFactory {
 
     public static WebDriver getdriver() {
         if (driver == null) {
-            driver = new ChromeDriver();
+            driver = new FirefoxDriver();
             return driver;
         } else {
             return driver;
@@ -64,6 +64,6 @@ public class DriverFactory {
 
     public static void closeallDriver() {
         driver.close();
-        driver.quit();
+        //driver.quit();
     }
 }

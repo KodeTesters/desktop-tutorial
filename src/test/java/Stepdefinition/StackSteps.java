@@ -7,7 +7,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class StackSteps extends TestRunner{
+public class StackSteps {
 	StackPage sp=new StackPage();
 	@Given("user should clicks the Getting Started button in Stack")
 	public void user_should_clicks_the_getting_started_button_in_stack() throws Exception {

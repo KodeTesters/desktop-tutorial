@@ -8,7 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class HomePageSteps extends TestRunner{
+public class HomePageSteps {
 
     HomePage hp=new HomePage();
     @Given("The user opens DS Algo portal link")

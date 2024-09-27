@@ -1,13 +1,11 @@
 @array
 Feature: Array feature
+
   Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
     When The user enter valid "kodetesters" and "numpyninja24"
     And The user click on login button
     Then The user redirected to homepage
-
-
-
 
   Scenario: Select array DS with Get Started button or select array from dropdown
   Given: user is navigated to home page
