@@ -5,21 +5,20 @@ import io.cucumber.java.*;
 import io.qameta.allure.Allure;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import utilities.ConfigReader;
 import utilities.LoggerLoad;
 
 import java.io.ByteArrayInputStream;
 
 public class hooks extends DriverFactory {
-
-    @BeforeAll
-    public static void before() throws Throwable {
-        LoggerLoad.info("Loading Config file");
-        ConfigReader.getProperties();
-        String browser = ConfigReader.getBrowserType();
-        driver = initializeDrivers(browser);
-        LoggerLoad.info("Initializing driver for : "+browser);
-    }
+//
+//    @BeforeAll
+//    public static void before() throws Throwable {
+//        LoggerLoad.info("Loading Config file");
+//        ConfigReader.getProperties();
+//        String browser = ConfigReader.getBrowserType();
+//        driver = initializeDrivers(browser);
+//        LoggerLoad.info("Initializing driver for : "+browser);
+//    }
 
     @Before
     public void scenario(Scenario scenario) {
@@ -40,12 +39,12 @@ public class hooks extends DriverFactory {
                     new ByteArrayInputStream(((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES)));
         }
     }
-//    @After
-//    public static void after() {
-//
-//        LoggerLoad.info("Closing Driver");
-//        DriverFactory.closeallDriver();
-//    }
+    @After
+    public static void after() {
+
+        LoggerLoad.info("Closing Driver");
+        DriverFactory.closeallDriver();
+    }
 
 }
 

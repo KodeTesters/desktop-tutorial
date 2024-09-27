@@ -41,15 +41,16 @@ public class DriverFactory {
 
         }
 
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
 
-       // driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
-        //driver.get("https://dsportalapp.herokuapp.com/");
-        //driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
+        driver.get("https://dsportalapp.herokuapp.com/");
+        driver.manage().timeouts().implicitlyWait(Duration.ofMillis(3000));
         return driver;
     }
 
+   
 
     public static WebDriver getdriver() {
         if (driver == null) {
