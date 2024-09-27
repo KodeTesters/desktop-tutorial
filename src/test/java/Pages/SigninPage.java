@@ -1,4 +1,4 @@
- package Pages;
+package Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -6,8 +6,8 @@ import org.openqa.selenium.support.PageFactory;
 
 import driverFactory.DriverFactory;
 
-public class Login extends DriverFactory {
-    //WebDriver driver=new ChromeDriver();
+public class SigninPage extends DriverFactory{
+	//WebDriver driver=new ChromeDriver();
 boolean isRequired;
 	
 	By usernamebtn=By.xpath("//*[@id=\'id_username\']");
@@ -85,6 +85,3 @@ boolean isRequired;
 	}
 
 }
-    
-
-   
