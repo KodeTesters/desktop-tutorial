@@ -44,7 +44,7 @@ public class hooks extends DriverFactory {
 
         LoggerLoad.info("Closing Driver");
         DriverFactory.closeallDriver();
-        driver.quit();
+       // driver.quit();
     }
 
 }
