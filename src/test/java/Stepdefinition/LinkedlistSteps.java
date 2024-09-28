@@ -6,7 +6,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LinkedlistSteps extends TestRunner {
+public class LinkedlistSteps  {
     LinkedlistPage lsp=new LinkedlistPage();
 
     @Given("The user is on the home page after logged in")

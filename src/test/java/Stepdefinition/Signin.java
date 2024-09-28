@@ -17,7 +17,7 @@ import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import Pages.SigninPage;
 import Runner.TestRunner;
 
-public class Signin extends TestRunner{
+public class Signin {
 
 	SigninPage sign = new SigninPage();
 	static String username;

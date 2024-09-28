@@ -4,7 +4,7 @@ Feature: Testing graph page on DSalgo aplliction
 
   Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
-    When The user enter valid "kodetes" and "numpymimja24"
+    When The user enter valid "kodetesters" and "numpyninja24"
     And The user click on login button
     Then The user redirected to homepage
 
@@ -15,6 +15,7 @@ Feature: Testing graph page on DSalgo aplliction
     When  user clicks Graph
     Then user is redirected to Graph page
     Then  user clicks Try Here button
+
   Scenario: The user run the code in tryEditor with valid input for Graph page
     Given The user is in a try here page having  tryEditor with a Run button to test
     When The user Enters valid python code in tryEditor from data "print('hello world')"

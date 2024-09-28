@@ -7,15 +7,15 @@ import org.openqa.selenium.WebElement;
 import driverFactory.DriverFactory;
 import utilities.LoggerLoad;
 
-public class GraphPage extends DriverFactory {
+public class Graphpage extends DriverFactory {
 
     public void user_click_to_login() {
         getdriver().get("https://dsportalapp.herokuapp.com/");
 
         getdriver().findElement(By.xpath("/html/body/div[1]/div/div/a/button")).click();
         getdriver().findElement(By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]")).click();
-        getdriver().findElement(By.xpath("//*[@id=\"id_username\"]")).sendKeys("bitbuddies");
-        getdriver().findElement(By.xpath("//*[@id=\"id_password\"]")).sendKeys("buddies@123");
+        getdriver().findElement(By.xpath("//*[@id=\"id_username\"]")).sendKeys("kodetesters");
+        getdriver().findElement(By.xpath("//*[@id=\"id_password\"]")).sendKeys("numpyninja24");
         getdriver().findElement(By.xpath("/html/body/div[2]/div/div[2]/form/input[4]")).click();
     }
     public void getstart() {

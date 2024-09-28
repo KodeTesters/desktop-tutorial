@@ -5,7 +5,6 @@ Feature: Validating Login page
   @TS_signin_01
   Scenario Outline: User on login page and login with invalid and valid inputs from Excel "<Sheetname>" and
     <RowNumber>
-
     Given The user is on signin page
     When The user enter sheet "<Sheetname>" and <RowNumber>
     Then click login button

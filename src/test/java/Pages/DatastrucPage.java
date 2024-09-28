@@ -90,7 +90,7 @@ public class DatastrucPage extends DriverFactory{
 		TakesScreenshot screenshot=(TakesScreenshot) getdriver();
 		
 		File source=screenshot.getScreenshotAs(OutputType.FILE);
-		File destination=new File("C:\\Users\\15146\\eclipse-workspace\\Dsalgo\\Screenshots\\practicequespage.png");
+		File destination=new File("C:\\Users\\barie\\IdeaProjects\\desktop-tutorial\\Screenshots\\practicequespage.png");
 		FileHandler.copy(source,destination);
 	}
 	public void signout()

@@ -1,33 +1,26 @@
 @linkedlist
 Feature: Testing LinkedList page
-
-
   @TS_Linkedlist
   Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
     When The user enter valid "Kodetester" and "numpyninja24"
     And The user click on login button
     Then The user redirected to homepage
-
-
   @TS_01
   Scenario: User navigated to "linked list" page
     Given The user is on the home page after logged in
     When The user clicks the Getting Started button in linked list pane
     Then The user redirected to Linked List  Page
-
   @TS_02
   Scenario: User navigated to "Introduction" page
     Given The user is on the Linked List page after logged in
     When The user clicks Introduction button
     Then The user should be directed to Introduction of Linked List Page
-
   @TS_03
   Scenario: User navigated to tryEditor page with "try here" button from Introduction page
     Given The user is on the Introduction of linked list page
     When The user clicks Try Here button of the introduction page
     Then The user redirected to the page having an tryEditor with a Run button to test
-
   @TS_04
   Scenario: The user run the code in tryEditor with valid input for Introduction page
     Given The user is in a try here page having  tryEditor with a Run button to test
@@ -37,7 +30,6 @@ Feature: Testing LinkedList page
     When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
     And user click on a Run button
     Then The user get the error message
-
   @TS_05
   Scenario: User navigated to "linked list" page
     Given The user is on the Linked List page after logged in
@@ -49,7 +41,6 @@ Feature: Testing LinkedList page
     Given The user is on the Creating a Linked List after logged in
     When The user clicks Try Here button in the creating linked list page
     Then The user should be redirected to a page having an tryEditor with a Run button to test
-
   @TS_07
   Scenario: The user run the code in tryEditor with valid input for Creating a Linked List page
     Given The user is in a try here page having  tryEditor with a Run button to test
