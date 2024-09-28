@@ -25,6 +25,7 @@ public class StackPage extends DriverFactory{
 			File destination=new File("C:\\mizba\\New_dsalgo\\Screenshots\\user_loggedin_stackpage.png");
 			FileHandler.copy(source,destination);
 	}
+	 
 	public void click_operation_stackbutton() {
 		WebElement Opera=driver.findElement(By.xpath("/html/body/div[2]/ul[1]/a"));
 		LoggerLoad.info("click " + Opera.getText() + " on Stack page");
@@ -129,4 +130,12 @@ public class StackPage extends DriverFactory{
 		LoggerLoad.info("click " + driver.findElement(signout_lnk).getText() + " link");
 		getdriver().findElement(signout_lnk).click();
 	}
+	// Method to take screenshots and save to a relative path
+	// private void takeScreenshot(String fileName) throws Exception {
+       // TakesScreenshot screenshot = (TakesScreenshot) getdriver();
+       // File source = screenshot.getScreenshotAs(OutputType.FILE);
+       // String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + fileName;
+       // File destination = new File(screenshotPath);
+       // FileHandler.copy(source, destination);
+    //}
 }

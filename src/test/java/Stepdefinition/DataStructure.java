@@ -14,8 +14,8 @@ DatastrucPage dsp=new DatastrucPage();
 ////	  driver.get("https://dsportalapp.herokuapp.com/");
 ////	   			driver.findElement(By.xpath("/html/body/div[1]/div/div/a/button")).click();
 ////			driver.findElement(By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]")).click();
-////			driver.findElement(By.xpath("//*[@id=\"id_username\"]")).sendKeys("bitbuddies");
-////			  driver.findElement(By.xpath("//*[@id=\"id_password\"]")).sendKeys("buddies@123");
+////			driver.findElement(By.xpath("//*[@id=\"id_username\"]")).sendKeys("kodetesters");
+////			  driver.findElement(By.xpath("//*[@id=\"id_password\"]")).sendKeys("numpyninja24");
 ////			  driver.findElement(By.xpath("/html/body/div[2]/div/div[2]/form/input[4]")).click();
 //}
 

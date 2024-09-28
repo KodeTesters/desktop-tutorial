@@ -1,5 +1,6 @@
 Feature: Testing data structure Module
 Scenario: Data structure
+@Ds_01
 Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
     When The user enter valid "kodetesters" and "numpyninja24"
