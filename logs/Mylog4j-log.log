@@ -4547,3 +4547,19 @@
 [INFO ]2024-09-2623:40:22.106[TestNG-test-ChromeTestCases-1]utilities.LoggerLoad1)-[@graph] : The user validating "Practice Questions" page
 [INFO ]2024-09-2623:40:22.106[TestNG-test-ChromeTestCases-1]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
 [INFO ]2024-09-2623:40:25.419[TestNG-test-ChromeTestCases-1]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-2718:00:06.866[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2718:00:06.871[main]utilities.LoggerLoad1)-[@graph] : The user is logged in to DS Algo portal
+[INFO ]2024-09-2718:00:06.871[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2718:00:11.866[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2718:00:11.866[main]utilities.LoggerLoad1)-[@graph] : Graph Module
+[INFO ]2024-09-2718:00:11.867[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2718:00:11.988[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2718:00:11.989[main]utilities.LoggerLoad1)-[@graph] : The user run the code in tryEditor with valid input for Graph page
+[INFO ]2024-09-2718:00:11.989[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2718:00:12.107[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2718:00:12.108[main]utilities.LoggerLoad1)-[@graph, @representation] : user is navigated to Graph page
+[INFO ]2024-09-2718:00:12.108[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2718:00:12.217[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2718:00:12.217[main]utilities.LoggerLoad1)-[@graph] : The user validating "Practice Questions" page
+[INFO ]2024-09-2718:00:12.218[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2718:00:12.314[main]utilities.LoggerLoad1)-Closing Driver
