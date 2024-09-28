@@ -4,7 +4,7 @@ Feature: Testing graph page on DSalgo aplliction
 
   Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
-    When The user enter valid "kodetes" and "numpymimja24"
+    When The user enter valid "kodetesters" and "numpyninja24"
     And The user click on login button
     Then The user redirected to homepage
 

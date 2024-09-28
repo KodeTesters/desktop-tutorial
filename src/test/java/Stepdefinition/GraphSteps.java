@@ -4,7 +4,6 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import Pages.Graphpage;
-import Runner.TestRunner;
 
 public class GraphSteps {
     Graphpage gp=new Graphpage();
