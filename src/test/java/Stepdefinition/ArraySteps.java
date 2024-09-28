@@ -7,7 +7,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
-public class ArraySteps extends DriverFactory{
+public class ArraySteps {
     ArrayPage ap=new ArrayPage();
 
     @Given("The user is on Signin page of DS Algo portal")

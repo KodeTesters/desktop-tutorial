@@ -6,7 +6,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import junit.textui.TestRunner;
 
-public class DataStructure extends TestRunner{
+public class DataStructure {
 DatastrucPage dsp=new DatastrucPage();
 //@Given("user in home page after logged in")
 //public void user_in_home_page_after_logged_in() {

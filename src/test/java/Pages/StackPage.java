@@ -22,7 +22,7 @@ public class StackPage extends DriverFactory{
 			getstartStack.click();
 			TakesScreenshot screenshot=(TakesScreenshot) driver;
 			File source=screenshot.getScreenshotAs(OutputType.FILE);
-			File destination=new File("C:\\mizba\\New_dsalgo\\Screenshots\\user_loggedin_stackpage.png");
+			File destination=new File("C:\\Users\\barie\\IdeaProjects\\desktop-tutorial\\Screenshots\\user_loggedin_stackpage.png");
 			FileHandler.copy(source,destination);
 	}
 	public void click_operation_stackbutton() {
@@ -42,7 +42,7 @@ public class StackPage extends DriverFactory{
 		 run.click();
 	}
 	public void code_execution() {
-		String result=getdriver().findElement(By.xpath("//*[@id=\"output\"]")).getText();
+		String result=getdriver().findElement(By.xpath("//*[@id='output']")).getText();
 		System.out.println("  valid code  " +  result);
 		getdriver().navigate().back();
 		WebElement tryhere=getdriver().findElement(By.xpath("/html/body/div[2]/div/div[2]/a"));
@@ -75,7 +75,7 @@ public class StackPage extends DriverFactory{
 	
 	public String output_display()
 	{
-		 By result=By.xpath("//*[@id=\"output\"]");
+		 By result=By.xpath("//*[@id='output']");
 	     String res= getdriver().findElement(result).getText();
 	     return res;
 	}
