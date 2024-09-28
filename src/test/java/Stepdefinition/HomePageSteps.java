@@ -1,7 +1,5 @@
 package Stepdefinition;
 
-import java.io.File;
-
 import Pages.HomePage;
 import Runner.TestRunner;
 import io.cucumber.java.en.Given;
