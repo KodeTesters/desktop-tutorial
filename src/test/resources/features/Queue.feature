@@ -1,62 +1,94 @@
 @Queue
-Feature: Module Queue Testing
-
-  Scenario: User is able to Login
-    Given The user is on the DsAlgo Signin Page
-    When The user enter valid "Kodetesters" and "numpyninja24"
-    And The user click on login button
-    Then The user should be redirected to Ds Algo Home Page
-
-  Scenario: Queue Module
-    Given The user is on the DsAlgo Home Page
-    When The User clicks Get Started button in Queue module
-    Then The User should be directed to Queue  Page
+Feature: Queue feature
+  Scenario: The User is logged in to DS Algo portal
+    Given The User is on Signin page of DS Algo portal
+    When The User enter valid "kodetesters" and "numpyninja24"
+    And The User click on login button
+    Then The User redirected to homepage
 
 
 
-  Scenario: Implementation of Queue in Python Page
-    Given The user is on  Queue Page
-    When The User clicks on Implementation of Queue in Python Page
-    Then The User should be directed to Implementation of Queue in Python Page
+  Scenario: Select Queue with Get Started button or select Queue from dropdown
+    Given User is navigated to home page
+    When User clicks on the "Get Started" button in Queue pane or select Queue item from drop down menu
+    Then User is redirected to Queue  page
 
 
-  Scenario: The user run the code in tryEditor with valid input for Implementation of Queue in Python page
-    Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The User is able to see the output in console
+  @Queue_01
+  Scenario: Implementation of Queue in Python page
+    Given User is on Queue  page
+    When The User clicks on Implementation of Queue in Python link
+    Then The User is redirected to Implementation of Queue in Pythonpage
+   ##### When User clicks Try Here button
+    Then User is redirected to a page having a TryEditor with Run button
+    When User enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # User enters invalid code
+    When The User enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed #####
 
-  Scenario: Implementation using collections.dequeue page
-    Given The user is on  Queue Page
-    When The User clicks on Implementation using collections.dequeue Page
-    Then The User should be directed to Implementation using collections.dequeue Page
+
+  @Queue_02
+  Scenario: Implementation using collections.deque
+    Given User is on Implementation of Queue in Python page
+    When The User clicks on Implementation using collections.deque link
+    Then User is redirected to Implementation using collections.deque page
+     ##### When User clicks Try Here button
+    Then User is redirected to a page having a TryEditor with Run button
+    When User enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # User enters invalid code
+    When The User enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed #####
 
 
-
-  Scenario: The user run the code in tryEditor with invalid input for Implementation using collections.dequeue page
-    Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The user should be presented with the Run
-
-  Scenario: Implementation using Array page
-    Given The user is on  Queue Page
+  @Queue_03
+  Scenario: Implementation using Array Page
+    Given User is on Implementation using collections.deque page
     When The User clicks on Implementation using Array Page
-    Then The User should be directed to Implementation using Array Page
+    Then User is redirected to Implementation using Array Page
+	#####When User clicks Try Here button
+    Then User is redirected to a page having a TryEditor with Run button
+    When User enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # User enters invalid code
+    When The User enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
 
-  Scenario: The user run the code in tryEditor with invalid input for Implementation using Array page
-    Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And The User clicks on Run button
-    Then The user should be presented with the Run
-
-  Scenario: Queue Operations page
-    Given The user is on  Queue Page
+  @Queue_04
+  Scenario: Queue Operations Page
+    Given User is on Implementation using Array Page
     When The User clicks on Queue Operations Page
-    Then The User should be directed to Queue Operations Page
+    Then User is redirected to Queue Operations Page
+	#####When User clicks Try Here button
+    Then User is redirected to a page having a TryEditor with Run button
+    When User enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # User enters invalid code
+    When The User enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
 
-  Scenario: The user run the code in tryEditor with invalid input for Queue page
-    Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And The User clicks on Run button
-    Then The user should be presented with the Run
+  @Queue_05
+  Scenario: Practice Questions to Search the Queue link
+    Given User is on Queues on python Page
+    When The User clicks on Practice Questions link
+    Then User is redirected to practice page
+    Then User clicks on Search the Queue link
+    Then User is redirected to questions1 page
+
+    # User enters code and click run button
+
+    When User enters code "print(hello)" in questions1 page
+    Then An alert message should be displayed in questions1 page
+    When User clicks submit button in questions1 page
+    Then submission output is displayed on in questions1 page
+
+

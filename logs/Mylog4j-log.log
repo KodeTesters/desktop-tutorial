@@ -4563,3 +4563,42 @@
 [INFO ]2024-09-2718:00:12.217[main]utilities.LoggerLoad1)-[@graph] : The user validating "Practice Questions" page
 [INFO ]2024-09-2718:00:12.218[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
 [INFO ]2024-09-2718:00:12.314[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-3008:44:34.432[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:34.440[main]utilities.LoggerLoad1)-[@Queue] : User is able to Login
+[INFO ]2024-09-3008:44:34.440[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:34.488[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:34.488[main]utilities.LoggerLoad1)-[@Queue] : Queue Module
+[INFO ]2024-09-3008:44:34.488[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:34.521[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:34.521[main]utilities.LoggerLoad1)-[@Queue] : Implementation of Queue in Python Page
+[INFO ]2024-09-3008:44:34.521[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:34.576[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:34.576[main]utilities.LoggerLoad1)-[@Queue] : The user run the code in tryEditor with valid input for Implementation of Queue in Python page
+[INFO ]2024-09-3008:44:34.576[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.013[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:59.013[main]utilities.LoggerLoad1)-[@Queue] : Implementation using collections.dequeue page
+[INFO ]2024-09-3008:44:59.013[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.042[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:59.042[main]utilities.LoggerLoad1)-[@Queue] : The user run the code in tryEditor with invalid input for Implementation using collections.dequeue page
+[INFO ]2024-09-3008:44:59.042[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.223[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:59.223[main]utilities.LoggerLoad1)-[@Queue] : Implementation using Array page
+[INFO ]2024-09-3008:44:59.223[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.238[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:59.238[main]utilities.LoggerLoad1)-[@Queue] : The user run the code in tryEditor with invalid input for Implementation using Array page
+[INFO ]2024-09-3008:44:59.238[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.433[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:59.433[main]utilities.LoggerLoad1)-[@Queue] : Queue Operations page
+[INFO ]2024-09-3008:44:59.433[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.449[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3008:44:59.449[main]utilities.LoggerLoad1)-[@Queue] : The user run the code in tryEditor with invalid input for Queue page
+[INFO ]2024-09-3008:44:59.449[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3008:44:59.623[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-3009:00:16.145[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3009:00:16.145[main]utilities.LoggerLoad1)-[@Queue] : User is able to Login
+[INFO ]2024-09-3009:00:16.145[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3009:00:16.161[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-3009:09:31.231[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3009:09:31.231[main]utilities.LoggerLoad1)-[@Queue] : User is able to Login
+[INFO ]2024-09-3009:09:31.231[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3009:09:31.262[main]utilities.LoggerLoad1)-Closing Driver
