@@ -1,55 +1,63 @@
 @Stack
-Feature: Testing Stack Module
-Scenario: signin Module
-
+Feature: Stack feature 
 Scenario: The user is logged in to DS Algo portal
-  Given The user is on Signin page of DS Algo portal
+    Given The user is on Signin page of DS Algo portal
     When The user enter valid "kodetesters" and "numpyninja24"
     And The user click on login button
     Then The user redirected to homepage
-    Scenario: stack module
-    Given      user should clicks the Getting Started button in Stack
-      Then   The user is in the Stack page after logged 
-     When   user clicks Operations in Stack button 
-    Then   user should be directed to Operations in Stack Page
-      Then The user clicks Try Here button
-Scenario: The user run the code in tryEditor with valid input for Operations of Stack page
-Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The user should be presented with the Run
-    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
-    And user click on a Run button
-    Then The user get the error message
-    @Implementation
-      Scenario: user on Implementation page
-       Given user is on Operations in stack page
-       When  user clicks Implementation button
-       Then  user should be directed to Implementation Page
-       Then The user clicks Try Here button
-Scenario: The user run the code in tryEditor with valid input for Implementation Stack page
-Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The user should be presented with the Run
-    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
-    And user click on a Run button
-    Then The user get the error message
-    Scenario: user is on Application page 
-    Given user is on Implementation page
-    When user clicks Application button
-       Then  user should be directed to Application Page
-    Then The user clicks Try Here button
-Scenario: The user run the code in tryEditor with valid input for Applications Stack page
-Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The user should be presented with the Run
-    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
-    And user click on a Run button
-    Then The user get the error message
+
+
     
-     Scenario: The user validating "Practice Questions" page
-    Given user in Stack page
-    When The user clicks Practice Questions button of Stack page
-    Then The user should be directed to Practice page
+    Scenario: Select stack DS with Get Started button or select stack from dropdown
+    Given: user is navigated to home page 
+    When user clicks on the "Get Started" button in Stack page or select Stack item from drop down menu
+    Then user is redirected to Array Data Structure page  
+    @stack_01
+    Scenario: Operations in Stack page
+    Given user is on Stack Data Structure page 
+    #The user clicks Operations in Stack
+    When The user clicks Operations in Stack link
+    Then The user is redirected to Operations in Stack page
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')" 
+    And clicks Run button
+    Then page displays output
+    # user enters invalid code
+    When The user enters invalid python code "'abc' = 1"  
+    And clicks Run button
+    Then An alert message should be displayed
+     @stack_02
+    Scenario: Implementation Page
+    Given User is on Operations in Stack page
+    When The user clicks on Implementation link
+    Then user is redirected to Implementation page
+     When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')" 
+    And clicks Run button
+    Then page displays output
+    # user enters invalid code
+    When The user enters invalid python code "'abc' = 1"  
+    And clicks Run button
+    Then An alert message should be displayed
+     @stack_03
+    Scenario: Application Page
+    Given User is on Implementation page
+    When The user clicks on Application link
+    Then user is redirected to Application page
+      When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')" 
+    And clicks Run button
+    Then page displays output
+    # user enters invalid code
+    When The user enters invalid python code "'abc' = 1"  
+    And clicks Run button
+    Then An alert message should be displayed
+     @stack_04
+    Scenario: Practice Questions to Search the Stack link
+    Given User is on Operations in Stack Page 
+     When The user clicks on Practice Questions link
+    Then user is redirected to practice page
+    

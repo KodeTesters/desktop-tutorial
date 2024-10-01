@@ -4563,3 +4563,136 @@
 [INFO ]2024-09-2718:00:12.217[main]utilities.LoggerLoad1)-[@graph] : The user validating "Practice Questions" page
 [INFO ]2024-09-2718:00:12.218[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
 [INFO ]2024-09-2718:00:12.314[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-2917:50:06.911[main]utilities.LoggerLoad1)-Initializing driver for --------------------------------- : firefox
+[INFO ]2024-09-2917:50:09.973[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-2917:50:54.848[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:50:54.850[main]utilities.LoggerLoad1)-[@home, @TS_Home_01] : DS Algo Portal
+[INFO ]2024-09-2917:50:54.850[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:16.814[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:16.814[main]utilities.LoggerLoad1)-[@home, @TS_Home_02] : User is on the Home page and click sign in
+[INFO ]2024-09-2917:51:16.815[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:17.723[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:17.725[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:17.726[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:18.445[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:18.445[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:18.445[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:19.024[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:19.024[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:19.024[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:19.616[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:19.617[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:19.617[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:20.177[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:20.178[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:20.178[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:20.708[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:20.708[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:20.709[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:21.233[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:21.233[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:21.234[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:21.751[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:21.751[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:21.751[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:22.254[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:22.254[main]utilities.LoggerLoad1)-[@home, @TS_Home_03] : user is on homepage without sigin
+[INFO ]2024-09-2917:51:22.254[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:22.832[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:22.832[main]utilities.LoggerLoad1)-[@home, @TS_Home_04] : User is on Home page and click getstarted link without sign in
+[INFO ]2024-09-2917:51:22.833[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:23.334[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:51:23.335[main]utilities.LoggerLoad1)-[@home, @TS_Home_05] : User is on Home page and click on register
+[INFO ]2024-09-2917:51:23.335[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:51:23.886[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-2917:52:13.643[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:52:13.645[main]utilities.LoggerLoad1)-[@signin, @TS_signin_01] : User on login page and login with invalid and valid inputs from Excel "Sheet1" and
+[INFO ]2024-09-2917:52:13.645[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:52:13.652[main]utilities.LoggerLoad1)-User is on Sigin Page
+[INFO ]2024-09-2917:52:17.239[main]utilities.LoggerLoad1)-User Enter username as " kode "and Password as " testers" 
+[INFO ]2024-09-2917:52:17.342[main]utilities.LoggerLoad1)-User clicks on login button
+[INFO ]2024-09-2917:52:17.343[main]utilities.LoggerLoad1)-Expected Message - Excel Sheet :  Invalid Username and Password
+[INFO ]2024-09-2917:52:17.552[main]utilities.LoggerLoad1)-Actual Message :  Invalid Username and Password
+[INFO ]2024-09-2917:52:17.692[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:52:17.692[main]utilities.LoggerLoad1)-[@signin, @TS_signin_01] : User on login page and login with invalid and valid inputs from Excel "Sheet1" and
+[INFO ]2024-09-2917:52:17.692[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:52:17.693[main]utilities.LoggerLoad1)-User is on Sigin Page
+[INFO ]2024-09-2917:52:17.850[main]utilities.LoggerLoad1)-User Enter username as " kode "and Password as " numpyninja24" 
+[INFO ]2024-09-2917:52:17.938[main]utilities.LoggerLoad1)-User clicks on login button
+[INFO ]2024-09-2917:52:17.938[main]utilities.LoggerLoad1)-Expected Message - Excel Sheet :  Invalid Username and Password
+[INFO ]2024-09-2917:52:18.148[main]utilities.LoggerLoad1)-Actual Message :  Invalid Username and Password
+[INFO ]2024-09-2917:52:18.255[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:52:18.255[main]utilities.LoggerLoad1)-[@signin, @TS_signin_01] : User on login page and login with invalid and valid inputs from Excel "Sheet1" and
+[INFO ]2024-09-2917:52:18.255[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:52:18.255[main]utilities.LoggerLoad1)-User is on Sigin Page
+[INFO ]2024-09-2917:52:18.376[main]utilities.LoggerLoad1)-User Enter username as " kodetesters "and Password as " numpyninja24" 
+[INFO ]2024-09-2917:52:18.431[main]utilities.LoggerLoad1)-User clicks on login button
+[INFO ]2024-09-2917:52:18.432[main]utilities.LoggerLoad1)-Expected Message - Excel Sheet :  You are logged in
+[INFO ]2024-09-2917:52:18.823[main]utilities.LoggerLoad1)-Actual Message :  You are logged in
+[INFO ]2024-09-2917:52:19.022[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:52:19.023[main]utilities.LoggerLoad1)-[@signin, @TS_signin_01] : User on login page and login with invalid and valid inputs from Excel "Sheet1" and
+[INFO ]2024-09-2917:52:19.023[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:52:19.023[main]utilities.LoggerLoad1)-User is on Sigin Page
+[INFO ]2024-09-2917:52:19.146[main]utilities.LoggerLoad1)-User Enter username as " kode "and Password as " ninja" 
+[INFO ]2024-09-2917:52:19.211[main]utilities.LoggerLoad1)-User clicks on login button
+[INFO ]2024-09-2917:52:19.212[main]utilities.LoggerLoad1)-Expected Message - Excel Sheet :  Invalid Username and Password
+[INFO ]2024-09-2917:52:19.406[main]utilities.LoggerLoad1)-Actual Message :  Invalid Username and Password
+[INFO ]2024-09-2917:52:19.515[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-2917:52:46.851[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:52:46.854[main]utilities.LoggerLoad1)-[@Data_Structure, @Ds_01] : The user is logged in to DS Algo portal
+[INFO ]2024-09-2917:52:46.854[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:52:49.511[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:52:49.511[main]utilities.LoggerLoad1)-[@Data_Structure] : user is in data structure intro page
+[INFO ]2024-09-2917:52:49.511[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:52:49.599[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-2917:53:31.164[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:31.166[main]utilities.LoggerLoad1)-[@Stack] : The user is logged in to DS Algo portal
+[INFO ]2024-09-2917:53:31.167[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:33.851[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:33.851[main]utilities.LoggerLoad1)-[@Stack] : stack module
+[INFO ]2024-09-2917:53:33.852[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:33.932[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:33.932[main]utilities.LoggerLoad1)-[@Stack] : The user run the code in tryEditor with valid input for Operations of Stack page
+[INFO ]2024-09-2917:53:33.932[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:34.007[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:34.007[main]utilities.LoggerLoad1)-[@Stack, @Implementation] : user on Implementation page
+[INFO ]2024-09-2917:53:34.007[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:34.071[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:34.071[main]utilities.LoggerLoad1)-[@Stack] : The user run the code in tryEditor with valid input for Implementation Stack page
+[INFO ]2024-09-2917:53:34.071[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:34.147[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:34.147[main]utilities.LoggerLoad1)-[@Stack] : user is on Application page
+[INFO ]2024-09-2917:53:34.147[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:34.219[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:34.220[main]utilities.LoggerLoad1)-[@Stack] : The user run the code in tryEditor with valid input for Applications Stack page
+[INFO ]2024-09-2917:53:34.220[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:34.280[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-2917:53:34.280[main]utilities.LoggerLoad1)-[@Stack] : The user validating "Practice Questions" page
+[INFO ]2024-09-2917:53:34.280[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-2917:53:34.323[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-3022:18:30.672[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:18:30.674[main]utilities.LoggerLoad1)-[@Stack] : The user is logged in to DS Algo portal
+[INFO ]2024-09-3022:18:30.675[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:18:34.768[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:18:34.768[main]utilities.LoggerLoad1)-[@Stack] : Select stack DS with Get Started button or select stack from dropdown
+[INFO ]2024-09-3022:18:34.768[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:18:34.793[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:18:34.794[main]utilities.LoggerLoad1)-[@Stack, @stack_01] : Operations in Stack page
+[INFO ]2024-09-3022:18:34.794[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:18:34.813[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:18:34.814[main]utilities.LoggerLoad1)-[@Stack, @stack_02] : Implementation Page
+[INFO ]2024-09-3022:18:34.814[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:18:34.834[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:18:34.834[main]utilities.LoggerLoad1)-[@Stack, @stack_03] : Application Page
+[INFO ]2024-09-3022:18:34.835[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:18:34.857[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:18:34.858[main]utilities.LoggerLoad1)-[@Stack, @stack_04] : Practice Questions to Search the Stack link
+[INFO ]2024-09-3022:18:34.858[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:18:34.862[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-09-3022:23:52.363[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:23:52.365[main]utilities.LoggerLoad1)-[@Data_Structure] : The user is logged in to DS Algo portal
+[INFO ]2024-09-3022:23:52.365[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:23:54.811[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-09-3022:23:54.812[main]utilities.LoggerLoad1)-[@Data_Structure] : user is in data structure intro page
+[INFO ]2024-09-3022:23:54.812[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-09-3022:23:54.892[main]utilities.LoggerLoad1)-Closing Driver
