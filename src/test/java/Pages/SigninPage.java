@@ -8,22 +8,22 @@ import driverFactory.DriverFactory;
 
 public class SigninPage extends DriverFactory{
 	//WebDriver driver=new ChromeDriver();
-boolean isRequired;
-	
-	By usernamebtn=By.xpath("//*[@id=\'id_username\']");
-	By passwrdbtn=By.xpath("//*[@id=\'id_password\']");
+	boolean isRequired;
+
+	By usernamebtn=By.xpath("//*[@id='id_username']");
+	By passwrdbtn=By.xpath("//*[@id='id_password']");
 	By loginbtn=By.xpath("//*[@value='Login']");
 	By registerbtn=By.xpath("//a[@href='/register']");
-    By alert=By.xpath("//div[@class='alert alert-primary']");
-    By signoutbtn=By.xpath("//a[@href='/logout']");
-	 
+	By alert=By.xpath("//div[@class='alert alert-primary']");
+	By signoutbtn=By.xpath("//a[@href='/logout']");
+
 	public void SigninPage() {
 
 		PageFactory.initElements(getdriver(), this);
 	}
 
 	public void login_page() {
-     getdriver().get("https://dsportalapp.herokuapp.com/login");
+		getdriver().get("https://dsportalapp.herokuapp.com/login");
 
 	}
 
@@ -31,8 +31,8 @@ boolean isRequired;
 		getdriver().findElement(usernamebtn).clear();
 		getdriver().findElement(usernamebtn).sendKeys(username);
 		getdriver().findElement(passwrdbtn).clear();
-    	getdriver().findElement(passwrdbtn).sendKeys(password);
-    	
+		getdriver().findElement(passwrdbtn).sendKeys(password);
+
 
 		// To check empty fields , we need to check "required" field is on an attribute
 		if (username.isBlank()) {
@@ -70,17 +70,17 @@ boolean isRequired;
 		String Title = getdriver().getTitle();
 		return Title;
 	}
-//
+	//
 //	public void signout() {
 //		getdriver().findElement(signoutbtn).click();
-//		
+//
 //	}
 	public void getexcelfilepath() {
 		getdriver().get("./src/test/resources/Exceldata/Login.xlsx");
 	}
 	public void signout()
 	{
-		By signout_lnk=By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]");
+		By signout_lnk=By.xpath("//*[@id='navbarCollapse']/div[2]/ul/a[3]");
 		getdriver().findElement(signout_lnk).click();
 	}
 

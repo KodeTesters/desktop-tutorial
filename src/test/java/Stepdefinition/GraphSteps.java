@@ -41,12 +41,6 @@ public class GraphSteps {
     public void user_clicks_graphical_representation() {
         gp.click_graphicalrepresent();
     }
-
-    @Then("user clicks tryhere")
-    public void user_clicks_tryhere() {
-        gp.tryhere();
-    }
-
     @Given("user in Graph page")
     public void user_in_graph_page() {
         gp.get_url();
@@ -57,5 +51,6 @@ public class GraphSteps {
         gp.practice_questions();
 
     }
+
 
 }

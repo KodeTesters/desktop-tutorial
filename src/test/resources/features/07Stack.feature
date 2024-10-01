@@ -1,63 +1,55 @@
 @Stack
-Feature: Stack feature 
-Scenario: The user is logged in to DS Algo portal
+Feature: Testing Stack Module
+  Scenario: signin Module
+
+  Scenario: The user is logged in to DS Algo portal
     Given The user is on Signin page of DS Algo portal
     When The user enter valid "kodetesters" and "numpyninja24"
     And The user click on login button
     Then The user redirected to homepage
-
-
-    
-    Scenario: Select stack DS with Get Started button or select stack from dropdown
-    Given: user is navigated to home page 
-    When user clicks on the "Get Started" button in Stack page or select Stack item from drop down menu
-    Then user is redirected to Array Data Structure page  
-    @stack_01
-    Scenario: Operations in Stack page
-    Given user is on Stack Data Structure page 
-    #The user clicks Operations in Stack
-    When The user clicks Operations in Stack link
-    Then The user is redirected to Operations in Stack page
+  Scenario: stack module
+    Given      user should clicks the Getting Started button in Stack
+    Then   The user is in the Stack page after logged
+    When   user clicks Operations in Stack button
+    Then   user should be directed to Operations in Stack Page
     When user clicks Try Here button
     Then user is redirected to a page having a TryEditor with Run button
-    When user enters valid python code "print('hello world')" 
+    When user enters valid python code "print('hello world')"
     And clicks Run button
     Then page displays output
     # user enters invalid code
-    When The user enters invalid python code "'abc' = 1"  
+    When The user enters invalid python code "'abc' = 1"
     And clicks Run button
     Then An alert message should be displayed
-     @stack_02
-    Scenario: Implementation Page
-    Given User is on Operations in Stack page
-    When The user clicks on Implementation link
-    Then user is redirected to Implementation page
-     When user clicks Try Here button
+  @Implementation
+  Scenario: user on Implementation page
+    Given user is on Operations in stack page
+    When  user clicks Implementation button
+    Then  user should be directed to Implementation Page
+    When user clicks Try Here button
     Then user is redirected to a page having a TryEditor with Run button
-    When user enters valid python code "print('hello world')" 
+    When user enters valid python code "print('hello world')"
     And clicks Run button
     Then page displays output
     # user enters invalid code
-    When The user enters invalid python code "'abc' = 1"  
+    When The user enters invalid python code "'abc' = 1"
     And clicks Run button
     Then An alert message should be displayed
-     @stack_03
-    Scenario: Application Page
-    Given User is on Implementation page
-    When The user clicks on Application link
-    Then user is redirected to Application page
-      When user clicks Try Here button
+  Scenario: user is on Application page
+    Given user is on Implementation page
+    When user clicks Application button
+    Then  user should be directed to Application Page
+    When user clicks Try Here button
     Then user is redirected to a page having a TryEditor with Run button
-    When user enters valid python code "print('hello world')" 
+    When user enters valid python code "print('hello world')"
     And clicks Run button
     Then page displays output
     # user enters invalid code
-    When The user enters invalid python code "'abc' = 1"  
+    When The user enters invalid python code "'abc' = 1"
     And clicks Run button
     Then An alert message should be displayed
-     @stack_04
-    Scenario: Practice Questions to Search the Stack link
-    Given User is on Operations in Stack Page 
-     When The user clicks on Practice Questions link
-    Then user is redirected to practice page
-    
+
+  Scenario: The user validating "Practice Questions" page
+    Given user in Stack page
+    When The user clicks Practice Questions button of Stack page
+    Then The user should be directed to Practice page

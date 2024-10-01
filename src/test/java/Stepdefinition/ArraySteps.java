@@ -1,34 +1,11 @@
 package Stepdefinition;
-
-import Pages.ArrayPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+import Pages.ArrayPage;
 
 public class ArraySteps {
-    ArrayPage ap=new ArrayPage();
-
-    @Given("The user is on Signin page of DS Algo portal")
-    public void the_user_is_on_signin_page_of_ds_algo_portal() {
-        ap.signin_page();
-    }
-
-    @When("The user enter valid {string} and {string}")
-    public void the_user_enter_valid_and(String username, String password) {
-        ap.valid_username_password(username, password);
-    }
-
-    @When("The user click on login button")
-    public void the_user_click_on_login_button() {
-        ap.login_button();
-    }
-
-    @Then("The user redirected to homepage")
-    public void the_user_redirected_to_homepage() {
-        ap.homepage_url();
-    }
-
+    ArrayPage ap = new ArrayPage();
     @When("user clicks on the {string} button in Array pane or select Array item from drop down menu")
     public void user_clicks_on_the_button_in_array_pane_or_select_array_item_from_drop_down_menu(String string) {
         // ap.getstarted_array();
@@ -54,52 +31,6 @@ public class ArraySteps {
     public void the_user_is_redirected_to_arrays_in_python_page() {
         ap.array_python_page();
     }
-
-    @When("user clicks Try Here button in Arrays in Python page")
-    public void user_clicks_try_here_button_in_arrays_in_python_page() {
-        ap.tryhere();
-    }
-
-    @Then("user is redirected to a page having a TryEditor with Run button for Arrays on python")
-    public void user_is_redirected_to_a_page_having_a_try_editor_with_run_button_for_arrays_on_python() {
-        String title=ap.gettitle();
-        System.out.println("Title of current page:"+ title);
-        ap.tryeditor_page();
-    }
-
-    @When("user enters valid code {string} for Arrays on python page")
-    public void user_enters_valid_code_for_arrays_on_python_page(String validcode) {
-        ap.editor_txtarea_validcode(validcode);
-    }
-
-    @When("clicks Run button for Arrays on python page")
-    public void clicks_run_button_for_arrays_on_python_page() {
-        ap.run_button();
-    }
-
-    @Then("page displays output for Arrays on python page")
-    public void page_displays_output_for_arrays_on_python_page() {
-        String output= ap.output_display();
-        System.out.println("output of code :"+ output);
-    }
-
-    @Given("user is on tryEditor page for Arrays on python page")
-    public void user_is_on_try_editor_page_for_arrays_on_python_page() {
-        // ap.tryeditor_page();
-    }
-
-    @When("The user enters invalid python code {string} for Arrays on python page")
-    public void the_user_enters_invalid_python_code_for_arrays_on_python_page(String invalidcode) throws Throwable {
-        ap.invalid_code(invalidcode);
-    }
-
-    @Then("An alert message should be displayed for Arrays on python page")
-    public void an_alert_message_should_be_displayed_for_arrays_on_python_page() {
-        String alertmsg =ap.alert_wrongcode();
-        System.out.println("Alert message"+ alertmsg);
-        ap.revertback();
-    }
-
     @Given("User is on Arrays Using python page")
     public void user_is_on_arrays_using_python_page() {
         String title=ap.gettitle();
@@ -118,51 +49,6 @@ public class ArraySteps {
         String title=ap.gettitle();
         System.out.println("Title of current page:"+ title);
     }
-
-    @When("user clicks Try Here button in Arrays using List page")
-    public void user_clicks_try_here_button_in_arrays_using_list_page() {
-        ap.tryhere();
-    }
-
-    @Then("user is redirected to a page having a TryEditor with Run button Arrays using List")
-    public void user_is_redirected_to_a_page_having_a_try_editor_with_run_button_arrays_using_list() {
-        String title=ap.gettitle();
-        System.out.println("Title of current page:"+ title);
-    }
-
-    @When("user enters valid code {string} for Arrays Using List page")
-    public void user_enters_valid_code_for_arrays_using_list_page(String validcode) {
-        ap.editor_txtarea_validcode(validcode);
-    }
-
-    @When("clicks Run button for Arrays Using List page")
-    public void clicks_run_button_for_arrays_using_list_page() {
-        ap.run_button();
-    }
-
-    @Then("page displays output for Arrays Using List page")
-    public void page_displays_output_for_arrays_using_list_page() {
-        String output= ap.output_display();
-        System.out.println("output of code :"+ output);
-    }
-
-    @Given("user is on tryEditor page for Arrays Using List page")
-    public void user_is_on_try_editor_page_for_arrays_using_list_page() {
-
-    }
-
-    @When("The user enters invalid python code {string} for Arrays Using List page")
-    public void the_user_enters_invalid_python_code_for_arrays_using_list_page(String invalidcode) throws Throwable {
-        ap.invalid_code(invalidcode);
-    }
-
-    @Then("An alert message should be displayed for Arrays Using List page")
-    public void an_alert_message_should_be_displayed_for_arrays_using_list_page() {
-        String alertmsg =ap.alert_wrongcode();
-        System.out.println("Alert message"+ alertmsg);
-        ap.revertback();
-    }
-
     @Given("User is on Arrays Using List page")
     public void user_is_on_arrays_using_list_page() {
         ap.array_python_page();
@@ -183,50 +69,6 @@ public class ArraySteps {
     public void user_clicks_try_here_button_in_basic_operations_in_list_page() {
         ap.tryhere();
     }
-
-    @Then("user is redirected to a page having a TryEditor with Run button Basic Operations In List")
-    public void user_is_redirected_to_a_page_having_a_try_editor_with_run_button_basic_operations_in_list() {
-        String title=ap.gettitle();
-        System.out.println("Title of current page:"+ title);
-        ap.tryeditor_page();
-    }
-
-    @When("user enters valid code {string} for Basic Operations In List page")
-    public void user_enters_valid_code_for_basic_operations_in_list_page(String validcode) {
-        ap.editor_txtarea_validcode(validcode);
-    }
-
-    @When("clicks Run button for Basic Operations In List page")
-    public void clicks_run_button_for_basic_operations_in_list_page() {
-        ap.run_button();
-    }
-
-    @Then("page displays output for Basic Operations In List page")
-    public void page_displays_output_for_basic_operations_in_list_page() {
-        String output= ap.output_display();
-        System.out.println("output of code :"+ output);
-    }
-
-    @Given("user is on tryEditor page for Basic Operations In List page")
-    public void user_is_on_try_editor_page_for_basic_operations_in_list_page() {
-        String title=ap.gettitle();
-        System.out.println("Title of current page:"+ title);
-
-    }
-
-    @When("The user enters invalid python code {string} for Basic Operations In List page")
-    public void the_user_enters_invalid_python_code_for_basic_operations_in_list_page(String invalidcode) throws Throwable {
-        ap.invalid_code(invalidcode);
-
-    }
-
-    @Then("An alert message should be displayed for Basic Operations In List page")
-    public void an_alert_message_should_be_displayed_for_basic_operations_in_list_page() {
-        String alertmsg =ap.alert_wrongcode();
-        System.out.println("Alert message"+ alertmsg);
-        ap.revertback();
-    }
-
     @Given("User is on Basic Operations In List Page")
     public void user_is_on_basic_operations_in_list_page() {
         String title=ap.gettitle();
@@ -244,46 +86,6 @@ public class ArraySteps {
         String title=ap.gettitle();
         System.out.println("Title of current page:"+ title);
     }
-
-    @When("user clicks Try Here button in Applications of Arraypage")
-    public void user_clicks_try_here_button_in_applications_of_arraypage() {
-        ap.tryhere();
-    }
-
-    @When("user enters valid code {string} for Applications of Arraypage")
-    public void user_enters_valid_code_for_applications_of_arraypage(String validcode) {
-        ap.editor_txtarea_validcode(validcode);
-    }
-
-    @When("clicks Run button for Applications of Arraypage")
-    public void clicks_run_button_for_applications_of_arraypage() {
-        ap.run_button();
-    }
-
-    @Then("page displays output for Applications of Arraypage")
-    public void page_displays_output_for_applications_of_arraypage() {
-        String output= ap.output_display();
-        System.out.println("output of code :"+ output);
-    }
-
-    @Given("user is on tryEditor page for Applications of Arraypage")
-    public void user_is_on_try_editor_page_for_applications_of_arraypage() {
-        String title=ap.gettitle();
-        System.out.println("Title of current page:"+ title);
-    }
-
-    @When("The user enters invalid python code {string} for Applications of Arraypage")
-    public void the_user_enters_invalid_python_code_for_applications_of_arraypage(String invalidcode) throws Throwable {
-        ap.invalid_code(invalidcode);
-    }
-
-    @Then("An alert message should be displayed for Applications of Arraypage")
-    public void an_alert_message_should_be_displayed_for_applications_of_arraypage() {
-        String alertmsg =ap.alert_wrongcode();
-        System.out.println("Alert message"+ alertmsg);
-        ap.revertback();
-    }
-
     @Given("User is on Arrays on python Page")
     public void user_is_on_arrays_on_python_page() {
         String title=ap.gettitle();

@@ -1,25 +1,14 @@
 package Pages;
 
-import java.util.concurrent.TimeUnit;
-
+import driverFactory.DriverFactory;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
-import driverFactory.DriverFactory;
 import utilities.LoggerLoad;
 
-public class ArrayPage extends DriverFactory{
-    //WebDriver driver=DriverFactory.getdriver();
-
-    //private static final String  = null;
-    //WebDriver driver=new FirefoxDriver();
-//	@SuppressWarnings("deprecation")
-    public void waits()
-    {
-        driver.manage().timeouts().implicitlyWait(300,TimeUnit.MILLISECONDS);
-    }
+public class ArrayPage extends DriverFactory {
     public void signin_page()
     {
         driver.get(" https://dsportalapp.herokuapp.com/home/");
@@ -105,16 +94,16 @@ public class ArrayPage extends DriverFactory{
         driver.findElement(tryherebtn).click();
         //actions.scrollToElement(driver.findElement(tryherebtn)).click(driver.findElement(tryherebtn)).perform();
     }
-    //	public void tryEditor()
-//	{
-//		By editor_box=By.xpath("//*[@id="answer_form"]/div/div/div[6]/div[1]/div/div/div/div[5]/div[2]/pre]");
-//		  driver.findElement(editor_box).click();
-//	}
+    //			public void tryEditor()
+//			{
+//				By editor_box=By.xpath("//*[@id='answer_form']");
+//				  getdriver().findElement(editor_box).click();
+//			}
     public void editor_txtarea_validcode(String validcode)
     {
-
-//		JavascriptExecutor executor = (JavascriptExecutor) driver;
-//	    executor.executeScript("document.driver.findElement(editor_text).value='validpythoncode';");
+//				By editor_text=By.xpath("/html/body/div/div/form/div/div/div[1]/textarea");
+//				JavascriptExecutor executor = (JavascriptExecutor) driver;
+//			    executor.executeScript("document.driver.findElement(editor_text).value='validpythoncode';");
         WebElement editbox = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
         LoggerLoad.info("Enter valid code " + editbox.getText() + " on Try Editor Page");
         editbox.sendKeys(validcode);
@@ -131,7 +120,6 @@ public class ArrayPage extends DriverFactory{
     {
         By runbtn=By.xpath("/html/body/div/div/form/button");
         LoggerLoad.info("click " + driver.findElement(runbtn).getText() + " on try editor page");
-
         driver.findElement(runbtn).click();
     }
     public String output_display()
@@ -143,23 +131,9 @@ public class ArrayPage extends DriverFactory{
     public void invalid_code(String invalidcode)
     {
         driver.get("https://dsportalapp.herokuapp.com/tryEditor");
-        //JavascriptExecutor executor = (JavascriptExecutor) driver;
-        WebElement editbox1 = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
-        LoggerLoad.info("Enter invalid code " + editbox1.getText() + " on Try Editor Page");
-        //executor.executeScript("arguments[0].click();",editbox1);
-        //WebElement editor=driver.findElement(By.xpath("//*[@id=\"editor\"]"));
-        //editor.click();
-//		editbox.sendKeys(Keys.CONTROL+"a");
-//		editbox.sendKeys(Keys.DELETE);
-
-//
-//			WebDriverWait wait1 = new WebDriverWait(driver,Duration.ofSeconds(5));
-//				WebElement element1 = wait1.until(ExpectedConditions.elementToBeClickable(editbox));
-        //editbox.click();
-        //WebElement editbox=driver.findElement(By.xpath("//*[@id=\"answer_form\"]/div/div/div[1]/textarea"));
-        editbox1.sendKeys(invalidcode);
-
-
+        WebElement editbox = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
+        LoggerLoad.info("Enter invalid code " + editbox.getText() + " on Try Editor Page");
+        editbox.sendKeys(invalidcode);
 
         //editbox.sendKeys(Keys.ENTER);
     }
