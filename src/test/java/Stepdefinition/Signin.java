@@ -18,41 +18,40 @@ import Pages.SigninPage;
 import Runner.TestRunner;
 
 public class Signin {
-
 	SigninPage sign = new SigninPage();
 	static String username;
 	static String password;
 	static String message;
 	Boolean isRequired;
 	//String Excelpath = getexcelfilepath();
-	
+
 	@Given("The user is on signin page")
 	public void the_user_is_on_signin_page() {
 		LoggerLoad.info("User is on Sigin Page");
-        sign.login_page();
+		sign.login_page();
 	}
 
 	@When("The user enter sheet {string} and {int}")
 	public void the_user_enter_sheet_and(String sheetname, Integer rownumber) throws InvalidFormatException, IOException {
 
-			ExcelReader reader = new ExcelReader();
+		ExcelReader reader = new ExcelReader();
 
-			List<Map<String, String>> testdata = reader.getData("./src/test/resources/Exceldata/Login.xlsx", sheetname);
+		List<Map<String, String>> testdata = reader.getData("./src/test/resources/Exceldata/Login.xlsx", sheetname);
 
-			username = testdata.get(rownumber).get("username");
+		username = testdata.get(rownumber).get("username");
 
-			password = testdata.get(rownumber).get("password");
+		password = testdata.get(rownumber).get("password");
 
-			message = testdata.get(rownumber).get("expectedresult");
+		message = testdata.get(rownumber).get("expectedresult");
 
-			LoggerLoad.info("User Enter username as \" " + username + " \"and Password as \" " + password + "\" ");
+		LoggerLoad.info("User Enter username as \" " + username + " \"and Password as \" " + password + "\" ");
 
-			if (username != null || password != null)
+		if (username != null || password != null)
 
-				sign.doLogin(username, password);
+			sign.doLogin(username, password);
 
-		}
-	
+	}
+
 
 	@Then("click login button")
 	public void click_login_button() {
@@ -65,7 +64,7 @@ public class Signin {
 	}
 	@Then("User clicks signout link")
 	public void user_clicks_signout_link() {
-	   sign.signout();
+		sign.signout();
 	}
 
 }

@@ -8,7 +8,7 @@ Feature: Array feature
     Then The user redirected to homepage
 
   Scenario: Select array DS with Get Started button or select array from dropdown
-  Given: user is navigated to home page
+    Given: user is navigated to home page
     When user clicks on the "Get Started" button in Array pane or select Array item from drop down menu
     Then user is redirected to Array Data Structure page
   @arr_01
@@ -17,65 +17,60 @@ Feature: Array feature
     #The user clicks Arrays in Python
     When The user clicks Arrays in Python link
     Then The user is redirected to Arrays in Python page
-    When user clicks Try Here button in Arrays in Python page
-    Then user is redirected to a page having a TryEditor with Run button for Arrays on python
-    When user enters valid code "print('hello world')" for Arrays on python page
-    And clicks Run button for Arrays on python page
-    Then page displays output for Arrays on python page
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
  # invalidcode
-  Scenario: user enters invalid code
-    Given user is on tryEditor page for Arrays on python page
-    When The user enters invalid python code "'abc' = 1" for Arrays on python page
-    And Clicks Run button for Arrays on python page
-    Then  Alert message should be displayed for Arrays on python page
+    When The user enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
   @arr_02
   Scenario: Arrays Using List
     Given User is on Arrays Using python page
     When The user clicks on Arrays Using List link
     Then user is redirected to Arrays Using List page
-    When user clicks Try Here button in Arrays using List page
-    Then user is redirected to a page having a TryEditor with Run button Arrays using List
-    When user enters valid code "print('hello world')" for Arrays Using List page
-    And clicks Run button for Arrays Using List page
-    Then page displays output for Arrays Using List page
- # invalidcode
-  Scenario: user enters invalid code
-    Given user is on tryEditor page for Arrays Using List page
-    When The User enters invalid python code "'abc' = 1" for Arrays Using List page
-    And user clicks Run button for Arrays Using List page
-    Then An Alert message should be displayed for Arrays Using List page
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+ # user enters  invalid code
+    When The user enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
+
   @arr_03
   Scenario: Basic Operations In List
-    Given the User is on Arrays Using List page
+    Given User is on Arrays Using List page
     When The user clicks on Basic Operations In List link
     Then user is redirected to Basic Operations In List page
-    When user clicks Try Here button in Basic Operations In List page
-    Then User is redirected to a page having a TryEditor with Run button Basic Operations In List
-    When user enters valid code "print('hello world')" for Basic Operations In List page
-    And clicks Run button for Basic Operations In List page
-    Then page displays output for Basic Operations In List page
- # invalidcode
-  Scenario: user enters invalid code
-    Given User is on tryEditor page for Basic Operations In List page
-    When The User enters invalid python code "'abc = 1" for Basic Operations In List page
-    And User clicks Run button for Basic Operations In List page
-    Then An Alert message should be displayed for Basic Operations In List page
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # user enters invalid code
+    When The user enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
+
   @arr_04
   Scenario: Applications of Array
     Given User is on Basic Operations In List Page
     When The user clicks on Applications of Array link
     Then user is redirected to Applications of Array page
-    When user clicks Try Here button in Applications of Arraypage
-    Then user is redirected to a page having a TryEditor with Run button Basic Operations In List
-    When user enters valid code "print('hello world')" for Applications of Arraypage
-    And clicks Run button for Applications of Arraypage
-    Then page displays output for Applications of Arraypage
- # invalidcode
-  Scenario: user enters invalid code
-    Given user is on tryEditor page for Applications of Arraypage
-    When The user enters invalid python code "'abc' = 1" for Applications of Arraypage
-    And clicks Run button for Applications of Arraypage
-    Then An alert message should be displayed for Applications of Arraypage
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+ # User enters invalid code
+
+    When The user enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
   @arr_05
   Scenario: Practice Questions to Search the Array link
     Given User is on Arrays on python Page
@@ -126,11 +121,4 @@ Feature: Array feature
     Then submission output is displayed on in questions4 page
     Then click signout for Array page
 
-    #Then user is redirected to practice page
-    #Then user clicks Max Consecutive Ones link
-    #Then user is redirected to questions2 page
-    #Then user clicks Find Numbers with Even Number of Digits link
-    #Then user is redirected to questions3 page
-    #Then user clicks Squares of  a Sorted Array link
-    #Then user is redirected to questions4 page
 

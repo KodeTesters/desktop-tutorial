@@ -9,83 +9,101 @@ import utilities.LoggerLoad;
 
 public class Graphpage extends DriverFactory {
 
-    public void user_click_to_login() {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
+    public void signin_page()
+    {
+        driver.get(" https://dsportalapp.herokuapp.com/home/");
+        //By getstarted=By.xpath(")
+        By signin_link=By.xpath("//*[@id='navbarCollapse']/div[2]/ul/a[3]");
+        driver.findElement(signin_link).click();
+    }
+    public void valid_username_password(String username,String password)
+    {
+        By username_txtbox=By.xpath("//*[@id='id_username']");
+        By password_txtbox=By.id("id_password");
+        driver.findElement(username_txtbox).sendKeys(username);
+        driver.findElement(password_txtbox).sendKeys(password);
 
-        getdriver().findElement(By.xpath("/html/body/div[1]/div/div/a/button")).click();
-        getdriver().findElement(By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]")).click();
-        getdriver().findElement(By.xpath("//*[@id=\"id_username\"]")).sendKeys("kodetesters");
-        getdriver().findElement(By.xpath("//*[@id=\"id_password\"]")).sendKeys("numpyninja24");
-        getdriver().findElement(By.xpath("/html/body/div[2]/div/div[2]/form/input[4]")).click();
+    }
+    public void login_button()
+    {
+        By loginbtn=By.xpath("/html/body/div[2]/div/div[2]/form/input[4]");
+        driver.findElement(loginbtn).click();
+    }
+    public void homepage_url()
+    {
+        String home_url=driver.getCurrentUrl();
+        System.out.println("Url of home page"+ home_url);
     }
     public void getstart() {
-        getdriver().findElement(By.xpath("/html/body/div[3]/div[7]/div/div/a")).click();
+        driver.findElement(By.xpath("/html/body/div[3]/div[7]/div/div/a")).click();
     }
     public void dropdown_graph()
     {
         By datastruct_dd=By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/a");
-        getdriver().findElement(datastruct_dd).click();
+        driver.findElement(datastruct_dd).click();
         By graph_dd=By.xpath("//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[6]");
-        getdriver().findElement(graph_dd).click();
+        driver.findElement(graph_dd).click();
     }
     public void clickgraph() {
-        WebElement click_graph=getdriver().findElement(By.xpath("/html/body/div[2]/ul[2]/a"));
+        WebElement click_graph=driver.findElement(By.xpath("/html/body/div[2]/ul[2]/a"));
         LoggerLoad.info("click " + click_graph.getText() + " link");
         click_graph.click();
     }
-    //@trybutton
-    public void tryhere() {
-        WebElement tryhere=getdriver().findElement(By.xpath("/html/body/div[2]/div/div[2]/a"));
-        LoggerLoad.info("click on" + tryhere.getText()+"button");
-        tryhere.click();
-    }
-    public void code_to_tryeditor(String validcode) {
-        WebElement editbox = getdriver().findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
-        LoggerLoad.info("Enter valid code " + editbox.getText() + " on Try Editor Page");
-        editbox.sendKeys(validcode);
-        editbox.sendKeys(Keys.ENTER);
-    }
-    public void run_button() {
-        WebElement run=getdriver().findElement(By.xpath("/html/body/div/div/form/button"));
-        LoggerLoad.info("click " + run.getText() + " on try editor page");
-        run.click();
-    }
-    public void code_execution() {
-        String result=getdriver().findElement(By.xpath("//*[@id=\"output\"]")).getText();
-        System.out.println("  valid code  " +  result);
-        getdriver().navigate().back();
-        WebElement tryhere=getdriver().findElement(By.xpath("/html/body/div[2]/div/div[2]/a"));
-        tryhere.click();
-    }
-
-    public void editor_txtarea_validcode(String validcode)
-    {
-//		By editor_text=By.xpath("/html/body/div/div/form/div/div/div[1]/textarea");
-//		JavascriptExecutor executor = (JavascriptExecutor) getdriver();
-//	    executor.executeScript("document.getdriver().findElement(editor_text).value='validpythoncode';");
-        WebElement editbox = getdriver().findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
-        LoggerLoad.info("Enter valid code " + editbox.getText() + " on Try Editor Page");
-        editbox.sendKeys(validcode);
-        editbox.sendKeys(Keys.ENTER);
-
-    }
     public void get_url()
     {
-        String get_url=getdriver().getCurrentUrl();
-        System.out.println("Url of tryeditor page"+ get_url );
+        String get_url=driver.getCurrentUrl();
+        System.out.println("Url of array page"+ get_url);
+    }
+    public void tryeditor_page()
+    {
+        driver.get("https://dsportalapp.herokuapp.com/tryEditor");
+    }
+    public void tryhere()
+    {
+        //Actions actions=new Actions(driver);
+        By tryherebtn=By.xpath("/html/body/div[2]/div/div[2]/a");
+        LoggerLoad.info("click on" + driver.findElement(tryherebtn).getText()+"button");
+        driver.findElement(tryherebtn).click();
+        //actions.scrollToElement(driver.findElement(tryherebtn)).click(driver.findElement(tryherebtn)).perform();
+    }
+    //			public void tryEditor()
+//			{
+//				By editor_box=By.xpath("//*[@id='answer_form']");
+//				  driver.findElement(editor_box).click();
+//			}
+    public void editor_txtarea_validcode(String validcode)
+    {
+//				By editor_text=By.xpath("/html/body/div/div/form/div/div/div[1]/textarea");
+//				JavascriptExecutor executor = (JavascriptExecutor) driver;
+//			    executor.executeScript("document.driver.findElement(editor_text).value='validpythoncode';");
+        WebElement editbox = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
+        LoggerLoad.info("Enter valid code " + editbox.getText() + " on Try Editor Page");
+        editbox.sendKeys(validcode);
+        editbox.sendKeys(Keys.ENTER);
+
+    }
+    public void tryEditor_url()
+    {
+        String tryEditor_url=driver.getCurrentUrl();
+        System.out.println("Url of tryeditor page"+ tryEditor_url );
     }
     //public void enterPythoncode(String )
-
+    public void run_button()
+    {
+        By runbtn=By.xpath("/html/body/div/div/form/button");
+        LoggerLoad.info("click " + driver.findElement(runbtn).getText() + " on try editor page");
+        driver.findElement(runbtn).click();
+    }
     public String output_display()
     {
         By result=By.xpath("//*[@id=\"output\"]");
-        String res= getdriver().findElement(result).getText();
+        String res= driver.findElement(result).getText();
         return res;
     }
     public void invalid_code(String invalidcode)
     {
         driver.get("https://dsportalapp.herokuapp.com/tryEditor");
-        WebElement editbox = getdriver().findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
+        WebElement editbox = driver.findElement(By.xpath("/html/body/div/div/form/div/div/div[1]/textarea"));
         LoggerLoad.info("Enter invalid code " + editbox.getText() + " on Try Editor Page");
         editbox.sendKeys(invalidcode);
 
@@ -94,32 +112,25 @@ public class Graphpage extends DriverFactory {
 
     public String alert_wrongcode()
     {
-        String alertmsg=getdriver().switchTo().alert().getText();
-        getdriver().switchTo().alert().accept();
+        String alertmsg=driver.switchTo().alert().getText();
+        driver.switchTo().alert().accept();
         return alertmsg;
 
     }
     public String gettitle()
     {
-        String title=getdriver().getTitle();
+        String title=driver.getTitle();
         return title;
     }
     public void revertback()
     {
-        getdriver().navigate().back();
+        driver.navigate().back();
     }
-
-    public void alert_alert_error() {
-        String alert=getdriver().switchTo().alert().getText();
-        getdriver().switchTo().alert().accept();
-        System.out.println("The error message in the alert box: " + alert);
-    }
-    //@reprensentation
     public void navi_graph() {
-        getdriver().navigate().to("https://dsportalapp.herokuapp.com/graph/graph/");
+        driver.navigate().to("https://dsportalapp.herokuapp.com/graph/graph/");
     }
     public void click_graphicalrepresent() {
-        WebElement graphicalrep=getdriver().findElement(By.xpath("/html/body/div[2]/div/div[1]/div/li[2]/a"));
+        WebElement graphicalrep=driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div/li[2]/a"));
         LoggerLoad.info("click " + graphicalrep.getText() + " on Graph page");
         graphicalrep.click();
 
@@ -128,13 +139,13 @@ public class Graphpage extends DriverFactory {
     {
         By arrays_Practice=By.xpath("//a[contains(text(),'Practice Questions')]");
         LoggerLoad.info("click " + driver.findElement(arrays_Practice).getText() + " on Graph page");
-        getdriver().findElement(arrays_Practice).click();
+        driver.findElement(arrays_Practice).click();
     }
     public void signout()
     {
         By signout_lnk=By.xpath("//*[@id=\"navbarCollapse\"]/div[2]/ul/a[3]");
         LoggerLoad.info("click " + driver.findElement(signout_lnk).getText() + " on Graph page");
-        getdriver().findElement(signout_lnk).click();
+        driver.findElement(signout_lnk).click();
     }
 }
 

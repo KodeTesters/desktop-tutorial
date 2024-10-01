@@ -1,108 +1,175 @@
 package Pages;
 
-import java.io.File;
-import java.time.Duration;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.io.FileHandler;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import java.io.File;
+
 import driverFactory.DriverFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
+import utilities.LoggerLoad;
 
 public class HomePage extends DriverFactory {
-    // Create a common wait method
-    private WebDriverWait getWait() {
-        return new WebDriverWait(getdriver(), Duration.ofSeconds(10));
+
+    //Dsalgo page
+    @FindBy (xpath="//a[@href='/home']")WebElement getstart_link;
+    @FindBy (xpath="//a[contains(text(),'Get Started')]")WebElement getstart;
+
+    //alert
+    @FindBy (xpath="//*[@class='alert alert-primary']")WebElement alert_msg;
+
+    //Homepage
+    @FindBy (xpath="//a[@href='data-structures-introduction']")WebElement getstart_datastructures;
+    @FindBy (xpath="//a[@href='array']")WebElement getstart_array;
+    @FindBy (xpath="//a[@href='linked-list']")WebElement getstart_linkedlist;
+    @FindBy (xpath="//a[@href='stack']")WebElement getstart_stack;
+    @FindBy (xpath="//a[@href='queue']")WebElement getstart_queue;
+    @FindBy (xpath="//a[@href='tree']")WebElement getstart_tree;
+    @FindBy (xpath="//a[@href='graph']")WebElement getstart_graph;
+
+    @FindBy (xpath="//*[@id=\"navbarCollapse\"]/div[1]/div/a")WebElement dropdown;
+    @FindBy (xpath="//*[@id=\"navbarCollapse\"]/div[1]/div/div/a[1]")WebElement dropdown_array;
+    @FindBy (xpath="//*[@id='navbarCollapse']//a[2]")WebElement dropdown_linkedlist;
+    @FindBy (xpath="//*[@id='navbarCollapse']//a[3]")WebElement dropdown_stack;
+    @FindBy (xpath="//*[@id='navbarCollapse']//a[4]")WebElement dropdown_queue;
+    @FindBy (xpath="//*[@id='navbarCollapse']//a[5]")WebElement dropdown_tree;
+    @FindBy (xpath="//*[@id='navbarCollapse']//a[6]")WebElement dropdown_graph;
+
+    //sigin
+    @FindBy (xpath="//a[@href='/login']") WebElement signin;
+    //register
+    @FindBy (xpath="//a[@href='/register']")WebElement register;
+
+    // Page Elements
+    public HomePage() {
+
+        PageFactory.initElements(driver, this);
     }
 
-    public void open_dsalgo_portal() {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
-    }
-    public void get_start_click() {
-        WebDriverWait wait = getWait();
-        WebElement getstart = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='btn']")));
-        getstart.click();
-    }
-    public void sign_in_click_link() throws Exception {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
-        get_start_click();
-        WebDriverWait wait = getWait();
-        WebElement signin = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text()='Sign in']")));
-        signin.click();
+    public void dsalgopage() {
 
-            // Screenshot after clicking sign-in
-        takeScreenshot("signin_page.png");
+        driver.get("https://dsportalapp.herokuapp.com/");
+
     }
-    public void drop_down_click(String menu) throws Exception {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
-        getdriver().findElement(By.xpath("//button[@class='btn']")).click();
-        WebElement dpdw1=getdriver().findElement(By.xpath("//a[@class='nav-link dropdown-toggle']"));
-        dpdw1.click();
-        // Screenshot after clicking dropdown
-        takeScreenshot("drop_down_options.png");
-        switch (menu) {
+
+    public void getStarted_link(String str) {
+
+        getstart_link.click();
+
+    }
+
+    public String getPageTitle() {
+
+        String title = driver.getTitle();
+        return title;
+
+    }
+
+    public String alert() {
+
+        String msg = alert_msg.getText();
+        return msg;
+
+    }
+
+    // Home page Elements
+    public void homepage() {
+
+        driver.get("https://dsportalapp.herokuapp.com/home");
+
+    }
+
+    public void getStarted_home(String string) {
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        switch (string) {
+            case "Datastructures":
+                LoggerLoad.info("click " + getstart_datastructures.getText() + "link on  DataStructures ");
+                js.executeScript("arguments[0].click()",getstart_datastructures);
+//				getstart_datastructures.click();
+                break;
             case "Arrays":
-                WebElement array=getdriver().findElement(By.xpath("//a[contains(text(),'Arrays')]"));
-                array.click();
+                LoggerLoad.info("click " + getstart_array.getText() + "link on Array ");
+                js.executeScript("arguments[0].click()",getstart_array);
+                //getstart_array.click();
                 break;
             case "Linkedlist":
-                WebElement linklist=getdriver().findElement(By.xpath("//a[contains(text(),'Linked List')]"));
-                linklist.click();
-
+                LoggerLoad.info("click " + getstart_linkedlist.getText() + "link on LinkedList");
+                js.executeScript("arguments[0].click()",getstart_linkedlist);
+                //getstart_linkedlist.click();
                 break;
             case "Stack":
-                WebElement stack=getdriver().findElement(By.xpath("//a[contains(text(),'Stack')]"));
-                stack.click();
-
+                LoggerLoad.info("click " + getstart_stack.getText() + "link on stack");
+                js.executeScript("arguments[0].click()",getstart_stack);
+                //getstart_stack.click();
                 break;
             case "Queue":
-                WebElement queue=getdriver().findElement(By.xpath("//a[contains(text(),'Queue')]"));
-                queue.click();
-
+                LoggerLoad.info("click " + getstart_queue.getText() + "link on queue ");
+                getstart_queue.click();
                 break;
             case "Tree":
-                WebElement tree=getdriver().findElement(By.xpath("//a[contains(text(),'Tree')]"));
-                tree.click();
-
+                LoggerLoad.info("click " + getstart_tree.getText() + "link on Tree ");
+                getstart_tree.click();
                 break;
             case "Graph":
-                WebElement graph=getdriver().findElement(By.xpath("//a[contains(text(),'Graph')]"));
-                graph.click();
-
+                LoggerLoad.info("click " + getstart_graph.getText() + "link on Graph ");
+                js.executeScript("arguments[0].click()",getstart_graph);
+                //getstart_graph.click();
                 break;
         }
-        //return;
-    }
-    public void any_get_start() {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
-        getdriver().findElement(By.xpath("/html/body/div[1]/div/div/a/button")).click();
-        WebElement anygetstart=getdriver().findElement(By.xpath("/html/body/div[2]/div[2]/div/div/a"));
-        anygetstart.click();
-    }
-    public void screen_shot_not_logged_in() throws Exception {
-        takeScreenshot("not_loggedin.png");
-    }
-    public void register_click_to_register_form() {
-        getdriver().get("https://dsportalapp.herokuapp.com/");
-        get_start_click();
-        //Given user is on Home Page
-        WebElement register = getdriver().findElement(By.xpath("//a[@href ='/register']"));
-        register.click();
-        // Click on the register link
-        getdriver().getCurrentUrl();
-    }
-    public void screen_shot_of_register_form() throws Exception {
-        takeScreenshot("registerform.png");
     }
 
-    // Method to take screenshots and save to a relative path
-    private void takeScreenshot(String fileName) throws Exception {
-        TakesScreenshot screenshot = (TakesScreenshot) getdriver();
-        File source = screenshot.getScreenshotAs(OutputType.FILE);
-        String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" + fileName;
-        File destination = new File(screenshotPath);
-        FileHandler.copy(source, destination);
+    // Dropdown
+    public void dropdown(String string) {
+
+        dropdown.click();
+        switch (string) {
+            case "Arrays":
+                LoggerLoad.info("User click on " + string);
+                dropdown_array.click();
+                break;
+            case "Linkedlist":
+                LoggerLoad.info("User click on " + string);
+                dropdown_linkedlist.click();
+                break;
+            case "Stack":
+                LoggerLoad.info("User click on " + string);
+                dropdown_stack.click();
+                break;
+            case "Queue":
+                LoggerLoad.info("User click on " + string);
+                dropdown_queue.click();
+                break;
+            case "Tree":
+                LoggerLoad.info("User click on " + string);
+                dropdown_tree.click();
+                break;
+            case "Graph":
+                LoggerLoad.info("User click on " + string);
+                dropdown_graph.click();
+                break;
+        }
+
+    }
+
+    // Signin
+    public void signin_link() {
+        signin.click();
+    }
+
+    public String login_page() {
+        String title = driver.getTitle();
+        return title;
+    }
+
+    // Register
+    public void register_link() {
+
+        register.click();
+
+    }
+
+    public String register_page() {
+        String title = driver.getTitle();
+        return title;
     }
 }

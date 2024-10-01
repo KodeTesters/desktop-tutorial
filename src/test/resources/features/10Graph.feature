@@ -1,4 +1,3 @@
-
 @graph
 Feature: Testing graph page on DSalgo aplliction
 
@@ -14,30 +13,30 @@ Feature: Testing graph page on DSalgo aplliction
     Then  user should be directed to Graph overview Page
     When  user clicks Graph
     Then user is redirected to Graph page
-    Then  user clicks Try Here button
-
-  Scenario: The user run the code in tryEditor with valid input for Graph page
-    Given The user is in a try here page having  tryEditor with a Run button to test
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The user should be presented with the Run
-    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
-    And user click on a Run button
-    Then The user get the error message
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # user enters invalid code
+    When The user enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
 
   @representation
   Scenario:   user is navigated to Graph page
     Given user is navigated to Graph page
     When user clicks graphical representation
-    Then  user clicks tryhere
-    When The user Enters valid python code in tryEditor from data "print('hello world')"
-    And user click on Run button
-    Then The user should be presented with the Run
-    When The user Enter invalid python code in tryEditor from sheet "'abc' = 1"
-    And user click on a Run button
-    Then The user get the error message
+    When user clicks Try Here button
+    Then user is redirected to a page having a TryEditor with Run button
+    When user enters valid python code "print('hello world')"
+    And clicks Run button
+    Then page displays output
+    # user enters invalid code
+    When The user enters invalid python code "'abc' = 1"
+    And clicks Run button
+    Then An alert message should be displayed
   Scenario: The user validating "Practice Questions" page
     Given user in Graph page
     When The user clicks Practice Questions button of Graph page
     Then The user should be directed to Practice page
-
