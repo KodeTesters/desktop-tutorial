@@ -6,7 +6,7 @@ import io.cucumber.java.en.When;
 import Pages.QueuePage;
 import Runner.TestRunner;
 
-public class QueueSteps extends TestRunner {
+public class QueueSteps {
     QueuePage qp=new QueuePage();
     @When("user clicks on the {string} button in Queue pane or select Queue item from drop down menu")
     public void user_clicks_on_the_button_in_queue_pane_or_select_queue_item_from_drop_down_menu(String string) {
@@ -32,45 +32,6 @@ public class QueueSteps extends TestRunner {
     public void user_is_on_implementation_of_queue_in_python_page() {
         String title=qp.gettitle();
         System.out.println("Title of current page:"+ title);
-    }
-    @When("user clicks Try Here button")
-    public void user_clicks_try_here_button() {
-        qp.tryhere();
-    }
-
-    @Then("user is redirected to a page having a TryEditor with Run button")
-    public void user_is_redirected_to_a_page_having_a_try_editor_with_run_button() {
-        String title=qp.gettitle();
-        System.out.println("Title of current page:"+ title);
-        // qp.tryEditor_url();
-    }
-
-    @When("user enters valid python code {string}")
-    public void user_enters_valid_python_code(String validcode) {
-        qp.editor_txtarea_validcode(validcode);
-    }
-
-    @When("clicks Run button")
-    public void clicks_run_button() {
-        qp.run_button();
-    }
-
-    @Then("page displays output")
-    public void page_displays_output() {
-        String output= qp.output_display();
-        System.out.println("output of code :"+ output);
-    }
-
-    @When("The user enters invalid python code {string}")
-    public void the_user_enters_invalid_python_code(String invalidcode) {
-        qp.invalid_code(invalidcode);
-    }
-
-    @Then("An alert message should be displayed")
-    public void an_alert_message_should_be_displayed() {
-        String alertmsg =qp.alert_wrongcode();
-        System.out.println("Alert message"+ alertmsg);
-        qp.revertback();
     }
     @Given("User is on Implementation using collections page")
     public void user_is_on_implementation_using_collections_page() {
@@ -131,6 +92,4 @@ public class QueueSteps extends TestRunner {
         System.out.println("Title of current page:"+ title);
         qp.signout();
     }
-
-
 }
