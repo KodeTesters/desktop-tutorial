@@ -16896,3 +16896,111 @@
 [INFO ]2024-09-3022:20:13.094[main]utilities.LoggerLoad1)-click Practice Questions on Linked list page
 [INFO ]2024-09-3022:20:13.323[main]utilities.LoggerLoad1)-click Sign out on Linked list page
 [INFO ]2024-09-3022:20:13.589[main]utilities.LoggerLoad1)-Closing Driver
+[INFO ]2024-10-0114:29:47.006[main]utilities.LoggerLoad1)-Loading Config file
+[INFO ]2024-10-0114:29:47.023[main]utilities.LoggerLoad1)-Initializing driver for --------------------------------- : chrome
+[INFO ]2024-10-0114:29:52.380[main]utilities.LoggerLoad1)-Initializing driver for : chrome
+[INFO ]2024-10-0114:29:52.602[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:52.604[main]utilities.LoggerLoad1)-[@home, @TS_home_01] : User launch home page of an dsalgo project
+[INFO ]2024-10-0114:29:52.605[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:52.652[main]utilities.LoggerLoad1)-User is on DSAlgo portal page
+[INFO ]2024-10-0114:29:53.107[main]utilities.LoggerLoad1)-User clicks on "Getstarted link" on Main Page
+[INFO ]2024-10-0114:29:54.067[main]utilities.LoggerLoad1)-Title of current page is ***** NumpyNinja ****
+[INFO ]2024-10-0114:29:54.091[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:54.093[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Datastructures" on home page without sign in
+[INFO ]2024-10-0114:29:54.094[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:54.095[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:54.336[main]utilities.LoggerLoad1)-click Get Startedlink on  DataStructures 
+[INFO ]2024-10-0114:29:54.760[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:54.798[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:54.798[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Arrays" on home page without sign in
+[INFO ]2024-10-0114:29:54.798[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:54.799[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:54.973[main]utilities.LoggerLoad1)-click Get Startedlink on Array 
+[INFO ]2024-10-0114:29:55.365[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:55.396[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:55.396[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Linkedlist" on home page without sign in
+[INFO ]2024-10-0114:29:55.396[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:55.397[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:55.622[main]utilities.LoggerLoad1)-click Get Startedlink on LinkedList
+[INFO ]2024-10-0114:29:55.988[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:56.003[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:56.003[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Stack" on home page without sign in
+[INFO ]2024-10-0114:29:56.003[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:56.005[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:56.215[main]utilities.LoggerLoad1)-click Get Startedlink on stack
+[INFO ]2024-10-0114:29:56.597[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:56.619[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:56.619[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Queue" on home page without sign in
+[INFO ]2024-10-0114:29:56.620[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:56.621[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:56.811[main]utilities.LoggerLoad1)-click Get Startedlink on queue 
+[INFO ]2024-10-0114:29:57.262[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:57.272[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:57.273[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Tree" on home page without sign in
+[INFO ]2024-10-0114:29:57.274[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:57.275[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:57.480[main]utilities.LoggerLoad1)-click Get Startedlink on Tree 
+[INFO ]2024-10-0114:29:57.885[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:57.899[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:57.900[main]utilities.LoggerLoad1)-[@home, @TS_home_02] : User is on Home page and click getstarted link "Graph" on home page without sign in
+[INFO ]2024-10-0114:29:57.900[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:57.900[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:58.064[main]utilities.LoggerLoad1)-click Get Startedlink on Graph 
+[INFO ]2024-10-0114:29:58.552[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:58.561[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:58.562[main]utilities.LoggerLoad1)-[@home, @TS_home_03] : User is on Home page and click on dropdown "Arrays" without sign in
+[INFO ]2024-10-0114:29:58.562[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:58.562[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:59.172[main]utilities.LoggerLoad1)-User clicks on dropdown without login
+[INFO ]2024-10-0114:29:59.277[main]utilities.LoggerLoad1)-User click on Arrays
+[INFO ]2024-10-0114:29:59.742[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:29:59.750[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:29:59.751[main]utilities.LoggerLoad1)-[@home, @TS_home_03] : User is on Home page and click on dropdown "Linkedlist" without sign in
+[INFO ]2024-10-0114:29:59.751[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:29:59.754[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:29:59.921[main]utilities.LoggerLoad1)-User clicks on dropdown without login
+[INFO ]2024-10-0114:29:59.999[main]utilities.LoggerLoad1)-User click on Linkedlist
+[INFO ]2024-10-0114:30:00.520[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:30:00.534[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:30:00.535[main]utilities.LoggerLoad1)-[@home, @TS_home_03] : User is on Home page and click on dropdown "Stack" without sign in
+[INFO ]2024-10-0114:30:00.535[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:30:00.536[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:30:00.675[main]utilities.LoggerLoad1)-User clicks on dropdown without login
+[INFO ]2024-10-0114:30:00.744[main]utilities.LoggerLoad1)-User click on Stack
+[INFO ]2024-10-0114:30:01.044[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:30:01.054[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:30:01.055[main]utilities.LoggerLoad1)-[@home, @TS_home_03] : User is on Home page and click on dropdown "Queue" without sign in
+[INFO ]2024-10-0114:30:01.055[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:30:01.057[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:30:01.172[main]utilities.LoggerLoad1)-User clicks on dropdown without login
+[INFO ]2024-10-0114:30:01.246[main]utilities.LoggerLoad1)-User click on Queue
+[INFO ]2024-10-0114:30:02.006[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:30:02.013[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:30:02.013[main]utilities.LoggerLoad1)-[@home, @TS_home_03] : User is on Home page and click on dropdown "Tree" without sign in
+[INFO ]2024-10-0114:30:02.013[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:30:02.013[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:30:02.209[main]utilities.LoggerLoad1)-User clicks on dropdown without login
+[INFO ]2024-10-0114:30:02.282[main]utilities.LoggerLoad1)-User click on Tree
+[INFO ]2024-10-0114:30:02.579[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:30:02.589[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:30:02.589[main]utilities.LoggerLoad1)-[@home, @TS_home_03] : User is on Home page and click on dropdown "Graph" without sign in
+[INFO ]2024-10-0114:30:02.589[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:30:02.591[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:30:02.683[main]utilities.LoggerLoad1)-User clicks on dropdown without login
+[INFO ]2024-10-0114:30:02.774[main]utilities.LoggerLoad1)-User click on Graph
+[INFO ]2024-10-0114:30:03.097[main]utilities.LoggerLoad1)-Actual Message : You are not logged in
+[INFO ]2024-10-0114:30:03.110[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:30:03.110[main]utilities.LoggerLoad1)-[@home, @TS_home_04] : User is on Home page and click on sign in
+[INFO ]2024-10-0114:30:03.110[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:30:03.112[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:30:03.211[main]utilities.LoggerLoad1)-User clicks on Sign in 
+[INFO ]2024-10-0114:30:03.469[main]utilities.LoggerLoad1)-User redirected to login page 
+[INFO ]2024-10-0114:30:03.479[main]utilities.LoggerLoad1)-Title of current page is : Login
+[INFO ]2024-10-0114:30:03.485[main]utilities.LoggerLoad1)-===============================================================================================
+[INFO ]2024-10-0114:30:03.485[main]utilities.LoggerLoad1)-[@home, @TS_home_05] : User is on Home page and click on Register
+[INFO ]2024-10-0114:30:03.485[main]utilities.LoggerLoad1)------------------------------------------------------------------------------------------------
+[INFO ]2024-10-0114:30:03.486[main]utilities.LoggerLoad1)-User is on Home page
+[INFO ]2024-10-0114:30:03.613[main]utilities.LoggerLoad1)-User clicks on Register 
+[INFO ]2024-10-0114:30:03.879[main]utilities.LoggerLoad1)-User redirected to Registraion page 
+[INFO ]2024-10-0114:30:03.916[main]utilities.LoggerLoad1)-Title of current page is : Registration
+[INFO ]2024-10-0114:30:03.917[main]utilities.LoggerLoad1)-Closing Driver
